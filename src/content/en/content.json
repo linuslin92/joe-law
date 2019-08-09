@@ -1,0 +1,212 @@
+{
+    "navbar": {
+        "logo": {
+            "src": "./img/jose-law.png",
+            "path": "/home",
+            "alt": "Law office of José A. Stewart"
+        },
+        "menu": [
+            {
+                "key": "m1",
+                "label": "Home",
+                "path": "/home"
+            },
+            {
+                "key": "m2",
+                "label": "Practice",
+                "path": "/practice"
+            },
+            {
+                "key": "m3",
+                "label": "José A. Stewart",
+                "path": "/bio"
+            },
+            {
+                "key": "m4",
+                "label": "Contact",
+                "path": "/contact"
+            }
+        ]
+    },
+    "home": {
+        "title": "Home",
+        "intro": {
+            "heading": "Over 30 Years of Experience",
+            "quotation": "When it comes to justice, I create a legal strategy an follow it to the end.",
+            "author": "José A. Stewart",
+            "content": [
+                "My name is José A. Stewart, and for over 30 years, my law office has helped Texans from all walks of life seek justice and equality.",
+                "My law office does not follow the big law firm business ideal, for a reason. I provide my clients with one on one attention, in order to develop a deeper understanding of their case. This way I can create a relationship with my clients that lasts a lifetime.",
+                "My plan is to be more accessible so that I can facilitate client communication which is an essential component in successfully reaching the objective.",
+                "My law office is committed to providing those who seek my legal assistance, a firm and attentive legal strategy that achieves results. It's important to me as your representative that I stay on top of the objective."
+            ]
+        }
+    },
+    "practice": {
+        "title": "Practice Area",
+        "areas": 
+        {
+            "criminal_law": {
+                "title": "Criminal Law",
+                "summary": "Crimes are usually categorized as misdemeanors or felonies. A felony is a serious misconduct that is punishable by death or by imprisonment for more than one year. A misdemeanor is misconduct which the law prescribes punishment of no more than one year in prison. Criminal procedures are designed to enforce the constitutional rights of criminal suspects and defendants, starting with initial polic contact and continuing through arrest, investigation, trial, sentencing, and appeals.",
+                "bullet_points": [
+                    {
+                        "id": "1",
+                        "list": [
+                            "Drug Crimes",
+                            "White Collar Crimes - Fraud Offense",
+                            "Firearms Offense",
+                            "Violent Crimes",
+                            "Sex Crimes",
+                            "DWI Defense",
+                            "Other Felony Crimes",
+                            "Misdemeanor Crimes",
+                            "Minor Offense (including Class C)"
+                        ]
+                    }
+                ]
+            },
+            "immigration_law": {
+                "title": "Immigration Law",
+                "summary": "In times like these, it's important to help keep families together. However, José A. Stewart can help you change your immigration status to provide a better life for your family without having to worry about one day being separated. He is registered with the American Immigration Lawyers Association, which seeks justice for immigrants facing deportation.",
+                "bullet_points": [
+                    {
+                        "id": "1",
+                        "label": "Our family-based work:",
+                        "list": [
+                            "Fiance(s) and Parents of US Citizens",
+                            "Spouses and Children of US Citizens/Residents",
+                            "Removal of Conditional Resident status",
+                            "Re-unification of families",
+                            "Waivers on grounds of inadmissibility",
+                            "Naturalization"
+                        ]
+                    },
+                    {
+                        "id": "2",
+                        "label": "Our litigation work:",
+                        "list": [
+                            "Asylum",
+                            "Removal (Deportation)",
+                            "Appeals (regulatory and Federal Courts)",
+                            "Waivers for grounds of inadmissibility"
+                        ]
+                    }
+                ]
+            },
+            "personal_injury": {
+                "title": "Personal Injury",
+                "summary": "Personal injury is the area of law that covers accidents and injuries that cause you physical or emotional harm. José A. Stewart can help you get the compensation you need if you've been hurt, and you believe that someone else's wrongful actions led to you being hurt. Medical bills maybe accumulating, and you may be missing work time. Personal injury is usually associated with bodily harm, but can include pain and suffering or emotional trauma.",
+                "bullet_points": [
+                    {
+                        "id": "1",
+                        "list": [
+                            "Car Accident",
+                            "Alcohol - related crashes",
+                            "Trailer truck accident",
+                            "Workplace Accident"
+                        ]
+                    }
+                ]
+            },
+            "family_law": {
+                "title": "Family Law",
+                "summary": "The dissolution of marriage involve financial responsibility rights of custody, and the obligation of a family has that belongs in the category of family law. José A. Stewart has experience with divorce cases and helping them be less difficult than what is already is. He can make sure that your rights and interests are protected.",
+                "bullet_points": [
+                    {
+                        "id": "1",
+                        "list": [
+                            "Divorce",
+                            "Child Support and Custody",
+                            "Family offense proceedings",
+                            "Post - judgement proceedings",
+                            "Will"
+                        ]
+                    }
+                ]
+            },
+            "default": {
+                "title": "Practice Area",
+                "summary": "José A. Stewart has the experience necessary to help you through a case and facilitate good understanding of the legal process. Mr. Stewart handles the cases listed below:",
+                "bullet_points": [
+                    {
+                        "id": "list_1",
+                        "label": "Criminal Defense",
+                        "hasSub": "false",
+                        "list": [
+                            "Drug Crimes",
+                            "White Collar Crimes - Fraud Offenses",
+                            "Firearms Offenses",
+                            "Violent Crimes",
+                            "Sex Crimes",
+                            "DWI Defense",
+                            "Other Felony Crimes",
+                            "Misdemeanor Crimes",
+                            "Minor Offenses (including Class C)"
+                        ]
+                    },
+                    {
+                        "id": "list_2",
+                        "label": "Immigration",
+                        "hasSub": "true",
+                        "list": [
+                            {
+                                "id": "sub1",
+                                "label": "Our family-based work:",
+                                "sublist": [
+                                    "Fiance(s) and Parents of US Citizens",
+                                    "Spouses and Children of US Citizens/Residents",
+                                    "Removal of Conditional Resident status",
+                                    "Re-unification of families",
+                                    "Waivers on grounds of inadmissibility",
+                                    "Naturaization"
+                                ]
+                            },
+                            {
+                                "id": "sub2",
+                                "label": "Our litigation work:",
+                                "sublist": [
+                                    "Asylum",
+                                    "Removal (Deportation)",
+                                    "Appeals (regulatory and Federal Courts",
+                                    "Waivers for grounds of inadmissibility"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "list_3",
+                        "label": "Personal Injury",
+                        "hasSub": "false",
+                        "list": [
+                            "Car Accident",
+                            "Workplace Accident",
+                            "Alcohol - related crashes"
+                        ]
+                    },
+                    {
+                        "id": "list_4",
+                        "label": "Family Law",
+                        "hasSub": "false",
+                        "list": [
+                            "Divorce",
+                            "Child Support and Custody",
+                            "Family offense proceedings",
+                            "Post - judgement proceedings"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "bio": {
+        "title": "About José A. Stewart"
+    },
+    "contactus": {
+        "title": "Contact Us",
+        "Phone": "(972) 422 - 8165"
+    },
+    "pageNotFound": {
+        "title": "404 - Page Not Found"
+    }
+}

@@ -1,0 +1,47 @@
+$bgColor: #4674e5;
+$text: #eee;
+$textHover: #d6ac27;
+footer {
+    width: 100%;
+    height: auto;
+    p {
+        display: flex;
+        margin: 0;
+        line-height: 1;
+    }
+    a {
+        text-decoration: none;
+        transition: color 500ms linear 50ms;
+        &,
+        &:hover,
+        &:active,
+        &:visited {
+            color: $text;
+        }
+        &:hover {
+            color: $textHover;
+        }
+    }
+    .contact {
+        justify-content: space-around;
+        background-color: $bgColor;
+        color: $text;
+        padding: .6rem 0;
+        white-space: pre-wrap;
+        flex-wrap: wrap;
+        line-height: 1.5;
+    }
+    .copyright {
+        justify-content: center;
+        padding: .3rem 0;
+        font-size: 1rem;
+    }
+    .nobreak {
+        white-space: nowrap;
+    }
+    .addr {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+}

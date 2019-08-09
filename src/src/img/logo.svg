@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="58.551769mm"
+   height="10.960054mm"
+   viewBox="0 0 58.551769 10.960055"
+   version="1.1"
+   id="svg8"
+   style="enable-background:new"
+   inkscape:export-filename="/Users/Meow/Documents/Workspace/joe-law/src/src/img/jose-law.png"
+   inkscape:export-xdpi="144.09073"
+   inkscape:export-ydpi="144.09073"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.48"
+     inkscape:cx="126.43814"
+     inkscape:cy="1008.8818"
+     inkscape:document-units="mm"
+     inkscape:current-layer="svg8"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-page="false"
+     inkscape:snap-grids="false"
+     inkscape:snap-to-guides="false"
+     inkscape:object-nodes="false"
+     inkscape:snap-nodes="false"
+     inkscape:snap-global="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="855"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-42.874838,-26.949448)"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:8.33059788px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.20826492"
+       x="80.833557"
+       y="30.346548"
+       id="text3944"
+       inkscape:export-xdpi="143.68541"
+       inkscape:export-ydpi="143.68541"
+       transform="scale(0.89293781,1.1198988)"><tspan
+         sodipodi:role="line"
+         x="80.629456"
+         y="30.346548"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.66447735px;line-height:0;font-family:'.Hiragino Kaku Gothic Interface';-inkscape-font-specification:'.Hiragino Kaku Gothic Interface, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:-0.40819934px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.20826492;fill:#e5eeff;fill-opacity:1"
+         id="tspan3946"
+         rotate="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+         dy="-0.78714317"
+         dx="0">JOSE A. STEWART</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.35373449px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.23323566"
+       x="47.461586"
+       y="37.61668"
+       id="text3950"
+       inkscape:export-xdpi="143.68541"
+       inkscape:export-ydpi="143.68541"><tspan
+         sodipodi:role="line"
+         id="tspan3948"
+         x="47.461586"
+         y="37.61668"
+         style="font-size:4.35373449px;letter-spacing:2.3812499px;word-spacing:1.32291663px;stroke-width:0.23323566;fill:#e5eeff;fill-opacity:0.94117647"
+         dx="0">LAW OFFICE</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     transform="translate(0,-0.04857585)"
+     style="display:none">
+    <path
+       style="fill:#37483e;stroke-width:0.23662066"
+       d="M 0,0.04857585 V 11.00863 H 58.551769 V 0.04857585 Z M 0.3219939,0.44493407 H 58.229775 V 10.612272 H 0.3219939 Z"
+       id="rect7644"
+       inkscape:export-xdpi="143.68541"
+       inkscape:export-ydpi="143.68541"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

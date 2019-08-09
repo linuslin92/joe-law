@@ -1,0 +1,194 @@
+$bgColor: #4674e5;
+$hoverBgColor: #2452c3;
+$activeColor: #d6ac27;
+$navTextColor: #eee;
+$black: #000;
+$white: #fff;
+header {
+    height: 8rem;
+    width: 100%;
+    background-color: $bgColor;
+    position: fixed;
+    z-index: 1060;
+    > div {
+        line-height: 8rem;
+        font-size: 2rem;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        width: inherit;
+        height: inherit;
+        + .container {
+            margin-top: 8rem;
+        }
+        .menu {
+            flex: 1 auto;
+            justify-content: space-around;
+            align-self: center;
+            .hamburger {
+                position: relative;
+                background-color: transparent;
+                border: thin solid $navTextColor;
+                border-radius: .3rem;
+                width: 3rem;
+                height: 3rem;
+                vertical-align: middle;
+                padding: 0;
+            }
+            ul {
+                display: inline-flex;
+                list-style-type: none;
+                padding: 0;
+                white-space: nowrap;
+            }
+        }
+        .dropdown {
+            padding: 2.5rem 1rem;
+            .dropdownSelect {
+                background-color: transparent;
+                color: #eee;
+                text-decoration: underline;
+                &.open {
+                    background-color: white;
+                    color: #2d2d2d;
+                    text-decoration: none;
+                }
+            }
+        }
+        .tribar {
+            font-size: 3rem;
+            line-height: 1;
+            position: absolute;
+            top: -4px;
+            color: $white;
+            width: 100%;
+            pointer-events: none;
+        }
+    }
+    + * {
+        margin-top: 8rem !important;
+    }
+}
+.logo {
+    flex: 0 0 40%;
+    .logo_img {
+        width: 100%;
+        max-width: 25rem;
+        min-width: 25rem;
+        vertical-align: middle;
+    }
+}
+.menu a {
+    display: inline-block;
+    height: 100%;
+    padding: 0 2rem;
+    text-decoration: none;
+    transition: background-color 500ms linear 50ms;
+    &:hover,
+    &:focus {
+        background-color: $hoverBgColor;
+    }
+    &.active {
+        &,
+        &:visited,
+        &:hover,
+        &:active {
+            color: $activeColor;
+            text-shadow: 0px 1px 2px $activeColor;
+        }
+    }
+} 
+
+@media screen and (min-width:768px) {
+    .menu {
+        .hamburger {
+            display: none;
+        }
+        ul {
+            width: 100%;
+            justify-content: center;
+            margin: 0;
+        }
+        a {
+            &,
+            &:visited,
+            &:hover,
+            &:active {
+                color: $navTextColor;
+                text-shadow: 0px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .menu {
+        .hamburger {
+            display: block;
+            flex: 0 3rem;
+            margin: 0 2rem;
+            &.active {
+                outline: thin dotted white;
+                outline-offset:  -.4rem;
+                & + ul {
+                    height: auto;
+                    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, .4);
+                }
+                &:after {
+                    content: '';
+                    height: 3rem;
+                    width: 3rem;
+                    background-color: $navTextColor;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    bottom: -3.2rem;
+                    left: -.1rem;
+                    box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, .4);
+                }
+            }
+        }
+        ul {
+            position: absolute;
+            height: 0px;
+            transition: height 500ms linear 50ms;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background-color: $navTextColor;
+            border-radius: .3rem;
+            margin: 1.5rem 0 0;
+        }
+        li {
+            width: 100%;
+            z-index: 1040;
+            &:not(:last-child) {
+                border-bottom: thin solid rgba(200, 200, 200, .8);
+            }
+            > a {
+                display: inline-block;
+                box-sizing: border-box;
+                color: $bgColor;
+                width: 100%;
+                &:hover {
+                    color: $navTextColor;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 641px) {
+
+}
+@media screen and (max-width: 640px) {
+    .menu {
+        > ul {
+            left: 0;
+            right: 0;
+            top: 5rem;
+            bottom: 0;
+            position: fixed;
+        }
+    }
+}

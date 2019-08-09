@@ -1,0 +1,51 @@
+{
+    "navbar": {
+        "logo": {
+            "src": "./jose-law.png",
+            "url": "/home"
+        },
+        "menu": [
+            {
+                "label": "Home",
+                "url": "/home"
+            },
+            {
+                "label": "Practice",
+                "url": "/practice"
+            },
+            {
+                "label": "José A. Stewart",
+                "url": "/bio"
+            }
+        ]
+    },
+    "home": {
+        "intro": {
+            "heading": "Over 30 Years of Experience",
+            "quotation": "When it comes to justice, I create a legal strategy an follow it to the end.",
+            "author": "José A. Stewart"
+        },
+        "free": {
+            "label": "Free initial consultation",
+            "link": "./"
+        }
+    },
+    "practice": {
+        "title": "Practice Area",
+        "areas": [
+            {
+                "personal_injury": {
+                    "summary": "Personal injury is the area of law that covers accidents and injuries that cause you physical or emotional harm. Jose A. Stewart can help you get the compensation you need if you've been hurt, and you believe that someone else's wrongful actions led to you being hurt. Medical bills maybe accumulating, and you may be missing work time. Personal injury is usually associated with bodily harm, but can include pain and suffering or emotional trauma.",
+                    "list": [
+                        "Car Accident",
+                        "Alcohol - related crashes",
+                        "Trailer truck accident"
+                    ]
+                }
+            }
+        ]
+    },
+    "bio": {
+        "title": "Bio"
+    }
+}

@@ -1,0 +1,108 @@
+$linkActive: #4674e5;
+$linkActive1: yellow;
+$white: #fff;
+$dark: rgba(64, 64, 64, 1);
+$lightBg: #f2f2f2;
+.area_menu  {
+    width: 100%;
+    padding-top: 2rem;
+    & > ul {
+        display: flex;
+        top: 0;
+        right: 7rem;
+        list-style-type: none;
+        flex-wrap: nowrap;
+        height: auto;
+        justify-content: center;
+        padding: 0;
+        box-sizing: border-box;
+        margin-bottom: 0;
+        > li {
+            border-radius: .5rem .5rem 0 0;
+            height: inherit;
+            border: .1rem solid $dark;
+            overflow: hidden;
+            margin-left: 1rem;
+            border-bottom-width: 0;
+        }
+        a {
+            text-decoration: none;
+            font-size: 1.8rem;
+            line-height: 3rem;
+            display: block;
+            height: inherit;
+            transition: all 500ms linear 50ms;
+            &,
+            &:active,
+            &:visited,
+            &:hover {
+                .areaLabel {
+                    color: #333;
+                }
+                .areaDesc {
+                    color: rgba(64, 64, 64, 1);
+                }
+            }
+            &.active {
+                background-color: $lightBg;
+                .areaLabel {
+                    color: $dark;
+                }
+            }
+            &:hover {
+                background-color: rgba(128, 128, 128, 1);
+                .areaLabel {
+                    color: $white;
+                }
+            }
+        }
+        .areaLabel {
+            flex: 0 30rem;
+            font-weight: 500;
+        }
+    }
+}
+.contentBox {
+    margin-top: -1px !important;
+    border-radius: .3rem;
+    background-color: $lightBg;
+}
+
+@media screen and (min-width: 769px) {
+    .area_menu {
+        a {
+            padding: .33rem 1.3rem;
+        }
+    }
+    .contentBox {
+        border: thin solid $dark;
+        margin: 0 2.5rem 2.5rem;
+        padding: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width:768px) {
+    .area_menu {
+        a {
+            padding: .32rem 1.2rem;
+        }
+    }
+    .contentBox {
+        border: thin solid $dark;
+        margin: 0 2rem 2rem;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .area_menu {
+        a {
+            padding: .31rem 1.1rem;
+        }
+    }
+    .contentBox {
+        border: thin solid $dark;
+        margin: 0 1rem 1rem;
+        padding: 1.5rem;
+    }
+}

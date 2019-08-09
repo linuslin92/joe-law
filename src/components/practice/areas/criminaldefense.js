@@ -1,0 +1,37 @@
+import React, { Component, Fragment } from 'react';
+
+export default class CriminalDefense extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            content: this.props.content
+        }
+    }
+    render() {
+        let CONT = this.state.content;
+        return (
+            <Fragment>
+                <h2>{CONT.label}</h2>
+                <p>{CONT.summary}</p>
+                {
+                    CONT.bullet_points.map((bullet)=>{
+                        return (
+                            <div key={bullet.id}>
+                                <label>{bullet.label}</label>
+                                <ul>
+                                    {
+                                        bullet.list.map((li, j)=>{
+                                            return (
+                                                <li key={`list_${j}`}>{li}</li>
+                                            )
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                        )
+                    })
+                }
+            </Fragment>
+        )
+    }
+}
