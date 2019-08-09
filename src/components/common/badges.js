@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './badges.scss';
+import global from '../../src/styles/global.module.scss';
 
 const image = require.context('../../src/img/badges');
 
@@ -8,7 +9,7 @@ export default class Badges extends Component {
     heading = <h1 className="heading1">{this.props.heading}</h1>;
     render() {
         return (
-            <div className="badge">
+            <div className={`badge ${global.paddingcontainer}`}>
                 { this.props.heading ? this.heading : '' }
                 <ul>
                     {

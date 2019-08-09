@@ -58,7 +58,7 @@ class Navbar extends Component {
         let logo = getImage(LOGO.src);
         return (
             <header>
-                <div className={global.container}>
+                <div className={`${global.container}`}>
                     <div className="logo">
                         <Link to={LOGO.path}>
                             <img className="logo_img" src={logo} alt={LOGO.alt} />

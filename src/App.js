@@ -32,7 +32,7 @@ function App() {
             <Route path="/home" render={()=>(<Container><Home bgImg={images('./mallet_high.jpg')} bgImgMin={images('./mallet_low.jpg')} content={CONTENT.home} /></Container>)} />
             <Route path="/practice" render={()=>(<Container><Practice bgImg={images('./justice_high.jpg')} bgImgMin={images('./justice_low.jpg')} content={CONTENT.practice} /></Container>)} />
             <Route path="/bio" render={()=>(<Container><Bio content={CONTENT.bio} /></Container>)} />
-            <Route path="/contact" render={()=>(<Container><Contact content={CONTENT.contactus} /></Container>)} />
+            <Route path="/contact" render={()=>(<Container><Contact bgImg={images('./handshake_high.jpg')} bgImgMin={images('./handshake_low.jpg')} content={CONTENT.contactus} /></Container>)} />
             <Route path="/" exact render={()=><Redirect to="/home"></Redirect>} />
             <Route render={()=>(<Container><PageNotFound content={CONTENT.pageNotFound} /></Container>)} />
           </Switch>

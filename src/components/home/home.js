@@ -9,6 +9,7 @@ import Hero from '../common/hero';
 import Badges from '../common/badges';
 
 import './home.scss';
+import global from '../../src/styles/global.module.scss';
 
 export default class Home extends Component {
     constructor(props) {
@@ -25,19 +26,12 @@ export default class Home extends Component {
                     <title>{CONT.title}</title>
                 </Helmet>
                 <Hero src={ this.props.bgImg } srcmin={ this.props.bgImgMin } />
-                <div>
+                <div className={global.paddingcontainer}>
                     <h2>{CONT.intro.heading}</h2>
                     <q>{CONT.intro.quotation}</q>
                     <span> - {CONT.intro.author}</span>
                 </div>
-                <div>
-                    {
-                        CONT.intro.content.map((c, i)=>
-                            <p className="paragraph" key={`p_${i}`}>{c}</p>
-                        )
-                    }
-                </div>
-                <Badges array={ badges } />
+                <Badges array={ badges } className={global.paddingcontainer} />
                 {/* <Badges array={ affiliates } heading="Media Affliates" /> */}
             </Fragment> 
         )

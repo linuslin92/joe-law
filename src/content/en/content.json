@@ -33,13 +33,7 @@
         "intro": {
             "heading": "Over 30 Years of Experience",
             "quotation": "When it comes to justice, I create a legal strategy an follow it to the end.",
-            "author": "José A. Stewart",
-            "content": [
-                "My name is José A. Stewart, and for over 30 years, my law office has helped Texans from all walks of life seek justice and equality.",
-                "My law office does not follow the big law firm business ideal, for a reason. I provide my clients with one on one attention, in order to develop a deeper understanding of their case. This way I can create a relationship with my clients that lasts a lifetime.",
-                "My plan is to be more accessible so that I can facilitate client communication which is an essential component in successfully reaching the objective.",
-                "My law office is committed to providing those who seek my legal assistance, a firm and attentive legal strategy that achieves results. It's important to me as your representative that I stay on top of the objective."
-            ]
+            "author": "José A. Stewart"
         }
     },
     "practice": {
@@ -200,13 +194,35 @@
         }
     },
     "bio": {
-        "title": "About José A. Stewart"
+        "title": "About José A. Stewart",
+        "content": [
+            "My name is José A. Stewart, and for over 30 years, my law office has helped Texans from all walks of life seek justice and equality.",
+            "My law office does not follow the big law firm business ideal, for a reason. I provide my clients with one on one attention, in order to develop a deeper understanding of their case. This way I can create a relationship with my clients that lasts a lifetime.",
+            "My plan is to be more accessible so that I can facilitate client communication which is an essential component in successfully reaching the objective.",
+            "My law office is committed to providing those who seek my legal assistance, a firm and attentive legal strategy that achieves results. It's important to me as your representative that I stay on top of the objective."
+        ]
     },
     "contactus": {
         "title": "Contact Us",
-        "Phone": "(972) 422 - 8165"
+        "phone": "(972)422-8165",
+        "fax": "(972)423-5356",
+        "email": "josestewart@verizon.net",
+        "address1": "1700 Alma Drive Suite 160",
+        "address2": "",
+        "city": "Plano",
+        "state": "TX",
+        "zipcode": "75075",
+        "hours": [
+            {
+                "begin": "Monday",
+                "end": "Friday",
+                "open": "9:00 am",
+                "close": "6:00 pm"
+            }
+        ]
     },
     "pageNotFound": {
-        "title": "404 - Page Not Found"
+        "title": "404 - Page Not Found",
+        "message": "Please check URL and try again."
     }
 }
