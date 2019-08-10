@@ -1,51 +1,262 @@
 {
     "navbar": {
         "logo": {
-            "src": "./jose-law.png",
-            "url": "/home"
+            "src": "./img/jose-law.png",
+            "path": "/home",
+            "alt": "Law office of José A. Stewart"
         },
         "menu": [
             {
-                "label": "Home",
-                "url": "/home"
+                "key": "m1",
+                "label": "Inicio",
+                "path": "/home"
             },
             {
-                "label": "Practice",
-                "url": "/practice"
+                "key": "m2",
+                "label": "Áreas de Práctica",
+                "path": "/practice"
             },
             {
+                "key": "m3",
                 "label": "José A. Stewart",
-                "url": "/bio"
+                "path": "/bio"
+            },
+            {
+                "key": "m4",
+                "label": "Contáctanos",
+                "path": "/contact"
             }
         ]
     },
     "home": {
+        "title": "Inicio",
         "intro": {
-            "heading": "Over 30 Years of Experience",
-            "quotation": "When it comes to justice, I create a legal strategy an follow it to the end.",
+            "heading": "Más de 30 años con experiencia",
+            "quotation": "Cuando se trata de justiciá, yo busco una estrategia legal y lo sigo hasta el final.",
             "author": "José A. Stewart"
-        },
-        "free": {
-            "label": "Free initial consultation",
-            "link": "./"
         }
     },
     "practice": {
-        "title": "Practice Area",
-        "areas": [
-            {
-                "personal_injury": {
-                    "summary": "Personal injury is the area of law that covers accidents and injuries that cause you physical or emotional harm. Jose A. Stewart can help you get the compensation you need if you've been hurt, and you believe that someone else's wrongful actions led to you being hurt. Medical bills maybe accumulating, and you may be missing work time. Personal injury is usually associated with bodily harm, but can include pain and suffering or emotional trauma.",
-                    "list": [
-                        "Car Accident",
-                        "Alcohol - related crashes",
-                        "Trailer truck accident"
-                    ]
-                }
+        "title": "Áreas de Práctica",
+        "areas": 
+        {
+            "criminal_law": {
+                "title": "Defensa Criminal",
+                "summary": "Los crímenes generalmente se clasifican como delitos menores o delitos graves. Un delito grave se castiga con la muerte o con carcel por más de un año. Un delito menor es la falta de conducta que la ley prescribe el castigo de no más de un año de prisión. Los procedimientos penales estan diseñados para hacer cumplir los derechos constitucionales de sospechosos y acusados criminales, empezando con el contacto de policia inciál y continuando con el aresto, investigaciíon, juicio, sentencia, y apelaciones.",
+                "bullet_points": [
+                    {
+                        "id": "criminal_law_1",
+                        "list": [
+                            "Crimenes de drogas",
+                            "Casos de fraude",
+                            "Ofensa de posesion de armas",
+                            "Crimen de violencia (violencia domestica)",
+                            "Delito sexual",
+                            "Ofensa de conducir bajo la influencia del alcohol",
+                            "Otros delitos graves",
+                            "Delitos menores (incluyendo ofensas clase c)"
+                        ]
+                    }
+                ]
+            },
+            "immigration_law": {
+                "title": "Inmigración",
+                "summary": "En tiempos como estos, es importante ayudar a familias a quedarse unidos. De hecho, José A. Stewart puede ayudarle a cambiar su estado migratorio para que usted siga ofreciendo a su familia una vida mejor sin preocuparse en correr el riesgo de ser deportado. El esta registrado con las Asociaciones de Abogados de Inmigraciòn, cual buscan justicia para inmigrantes que enfrentan en ser deportados.",
+                "bullet_points": [
+                    {
+                        "id": "immigration_law_1",
+                        "label": "Casos de familia:",
+                        "list": [
+                            "Comprometidos y padres de ciudadanos estadounidenses",
+                            "Parejas e hijos de ciudadanos/residentes de los EE. UU",
+                            "Cancelacion de condiciones de residencia",
+                            "Reunificación de familias",
+                            "Exenciones por inadmisibilidad",
+                            "Naturalización"
+                        ]
+                    },
+                    {
+                        "id": "immigration_law_2",
+                        "label": "Manejamos procesos de:",
+                        "list": [
+                            "Asilo",
+                            "Deportación",
+                            "Apelaciones a cortes Federales",
+                            "Exenciones por motivos de inadmisibilidad"
+                        ]
+                    }
+                ]
+            },
+            "personal_injury": {
+                "title": "Lesiones a la Persona",
+                "summary": "Lesiones a la persona es la área de la ley que cubre accidentes y lesiones que le causan daño físico o daño emocional. José A. Stewart puede ayudale a obtener la compensación que se merece lo han herido, y cree que las acciones de otra perona le llevaron a ser lastimado. Las faturas médicas pueden estar acumulándose. y puede estar perdiendo tiempo de trabajo. Las lesiones a la persona generalmente se asocian con daños corporales, pero puede incluir dolor y sufrimento o traumá emocional.",
+                "bullet_points": [
+                    {
+                        "id": "personal_injury_1",
+                        "list": [
+                            "Accidentes automovilístico",
+                            "Accidentes de camión",
+                            "Accidentes relacionados con el alcohol"
+                        ]
+                    }
+                ]
+            },
+            "family_law": {
+                "title": "Derechos de Familia",
+                "summary": "La disolución de matrimonió involucran las responsabilidades financieras, los derechos de custodia, y demás obligaciones de una familia que pertenecen a la categoría de derecho de familia. José A. Stewart tiene experiencia con casos de divorció y puede asegurarse de que sus derechos e intereses estén protegidos",
+                "bullet_points": [
+                    {
+                        "id": "family_law_1",
+                        "list": [
+                            "Divorció",
+                            "Manutención de los hijos",
+                            "Custadiá de menores",
+                            "Procedimientos de ofensa familiar",
+                            "Testamento testamentaria"
+                        ]
+                    }
+                ]
+            },
+            "default": {
+                "title": "Áreas de Práctica",
+                "summary": "José A. Stewart tiene la experiencia necesaria para ayudarle en su caso y facilitar su entendimiento de su proceso legal. El Sr. Stewart se dedica en estos tipos de casos:",
+                "bullet_points": [
+                    {
+                        "id": "default_1",
+                        "label": "Defendsa Criminal",
+                        "hasSub": "false",
+                        "list": [
+                            "Crimenes de drogas",
+                            "Casos de fraude",
+                            "Ofensa de posesión de armas",
+                            "Crimen de violencia (violencia domestica)",
+                            "Delito sexual",
+                            "Ofensa de conducir bajo la influenciá del alcohol",
+                            "Otros delitos graves",
+                            "Delitos menores (incluyendo ofensas clase c)"
+                        ]
+                    },
+                    {
+                        "id": "default_2",
+                        "label": "Inmigracion",
+                        "hasSub": "true",
+                        "list": [
+                            {
+                                "id": "default_2_sub_1",
+                                "label": "Casos de familia:",
+                                "sublist": [
+                                    "Prometido(s) y Padres ciudadanos Estadounidenses",
+                                    "Parejas y niños ciudadanos Estadounidenses/Residentes",
+                                    "Remoción de las condiciones de residencia",
+                                    "Re-unificación de familias",
+                                    "Exenciones por inadmisibilidad",
+                                    "Naturalizaciòn"
+                                ]
+                            },
+                            {
+                                "id": "default_2_sub_2",
+                                "label": "Manejamos procesos de:",
+                                "sublist": [
+                                    "Asilio",
+                                    "Deportación",
+                                    "Apeliciaciones a cortes Federales",
+                                    "Exenciones por inadmisibilidad"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "default_3",
+                        "label": "Lesiones a la persona",
+                        "hasSub": "false",
+                        "list": [
+                            "Accidentes de vehiculos",
+                            "Choques relacionados con el alcohol",
+                            "Accidente de camiòn"
+                        ]
+                    },
+                    {
+                        "id": "defaultt_4",
+                        "label": "Derechos de familia",
+                        "hasSub": "false",
+                        "list": [
+                            "Divorcios",
+                            "Manutención de los hijos",
+                            "Custodia de menores",
+                            "Procedimientos de ofensa familiar",
+                            "Testamento testamentaria"
+                        ]
+                    }
+                ]
             }
-        ]
+        }
     },
     "bio": {
-        "title": "Bio"
+        "title": "José A. Stewart",
+        "content": [
+            "Mi nombre es José A. Stewart, y durante más de 30 años, mi oficina ha ayudado a Tejanos de todos los caminos de la vida a buscar justiciá e igualdad.",
+            "Mi bufete no sigue el mismo camino de las firmas grandes, por una rason. Yo les ofresco a mis clientes atención de uno a uno para obener un entendimiento mas profundo de su caso. De esté modo puedo crear una relación duradera con mis clientes.",
+            "Mi plan es facilitar la comunicación con el cliente cúal es un componente esencial para alcansar mi objetivó extosamente.",
+            "Mi oficina se dedica en ofrecer aquellos que buscan mi asistencia legal, una estrategia para lograr resultados. Es importante para mi como su representate estar al tanto de todo."
+        ]
+    },
+    "contactus": {
+        "title": "Contáctanos",
+        "phone": {
+            "label": "Telefono",
+            "text": "(972)422-8165"
+        },
+        "fax": {
+            "label": "Fax",
+            "text": "(972)423-5356"
+        },
+        "email": {
+            "label": "Email",
+            "text": "josestewart@verizon.net"
+        },
+        "address1": {
+            "label": "Address",
+            "text": "1700 Alma Drive Suite 160"
+        },
+        "address2": {
+            "label": "Address2",
+            "text": ""
+        },
+        "city": {
+            "label": "Cuidad",
+            "text": "Plano"
+        },
+        "state": {
+            "label": "State",
+            "text": "TX"
+        },
+        "zipcode": {
+            "label": "Zip Code",
+            "text": "75075"
+        },
+        "hours": {
+            "label": "Ahoras",
+            "text": [
+                {
+                    "begin": "Monday",
+                    "end": "Friday",
+                    "open": "9:00 am",
+                    "close": "6:00 pm"
+                }
+            ]
+        }
+    },
+    "footer": {
+        "copyright": {
+            "text": "Copyright &copy; 2019 Todos los Derechos Reservados."
+        }
+    },
+    "pageNotFound": {
+        "heroimage": {
+            "high": "./courtroom.jpg",
+            "low": "./courtroom_low.jpg"
+        },
+        "title": "404 - Documento No encontrado",
+        "message": "Verifique la URL e intente nuevamente."
     }
 }

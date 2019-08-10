@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './dropdown.scss';
 
+import LanguageContext from '../../context/languagecontext';
 /*
  * Props -  
  *   handler    : function  (Event);
@@ -38,26 +39,31 @@ export default class Dropdown extends Component {
         };
         
         return (
-            <div className="dropdown" style={ this.props.style }>
-                <input 
-                    className="dropdownSelect" 
-                    readOnly 
-                    value={ this.state.selectLabel } 
-                    data-value={ this.state.selectValue } 
-                    data-key={ this.state.selectId } 
-                    onClick={ this.toggleOpen } />
-                <ul className="dropdownOptions">
-                    {
-                        this.props.data.options.map(option=>{
-                            return (
-                                <li value={ option.value } key={ option.id } data-option-id={ option.id } onClick={ clickevent }>
-                                    { option.label }
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
-            </div>
+            <LanguageContext.Consumer>
+                {context=>(
+                    <div className="dropdown" style={ this.props.style }>
+                        {console.log(context.switch('es'))}
+                        <input 
+                            className="dropdownSelect" 
+                            readOnly 
+                            value={ this.state.selectLabel } 
+                            data-value={ this.state.selectValue } 
+                            data-key={ this.state.selectId } 
+                            onClick={ this.toggleOpen } />
+                        <ul className="dropdownOptions">
+                            {
+                                this.props.data.options.map(option=>{
+                                    return (
+                                        <li value={ option.value } key={ option.id } data-option-id={ option.id } onClick={ clickevent }>
+                                            { option.label }
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
+                    </div>
+                )}
+            </LanguageContext.Consumer>
         )
     }
 }

@@ -56,6 +56,7 @@ class Navbar extends Component {
         let LOGO = this.state.content.logo;
         let MENU = this.state.content.menu;
         let logo = getImage(LOGO.src);
+
         return (
             <header>
                 <div className={`${global.container}`}>

@@ -59,22 +59,22 @@ export default class Practice extends Component {
                         <ul role="tablist" aria-labelledby="practice_header">
                             <li>
                                 <Link to="/practice/criminal_law" activeClassName="active" role="tab" onClick={this.updateImage}>
-                                    <label className="areaLabel">Criminal Law</label>
+                                    <label className="areaLabel">{CONT.areas.criminal_law.title}</label>
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/practice/family_law" activeClassName="active" role="tab" onClick={this.updateImage}>
-                                    <label className="areaLabel">Family Law</label>
+                                    <label className="areaLabel">{CONT.areas.family_law.title}</label>
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/practice/immigration_law" activeClassName="active" role="tab" onClick={this.updateImage}>
-                                    <label className="areaLabel">Immigration Law</label>
+                                    <label className="areaLabel">{CONT.areas.immigration_law.title}</label>
                                 </Link>
                             </li>
                             <li>
                                 <Link to="/practice/personal_injury" activeClassName="active" role="tab" onClick={this.updateImage}>
-                                    <label className="areaLabel">Personal Injury</label>
+                                    <label className="areaLabel">{CONT.areas.personal_injury.title}</label>
                                 </Link>
                             </li>
                         </ul>

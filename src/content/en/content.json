@@ -42,10 +42,10 @@
         {
             "criminal_law": {
                 "title": "Criminal Law",
-                "summary": "Crimes are usually categorized as misdemeanors or felonies. A felony is a serious misconduct that is punishable by death or by imprisonment for more than one year. A misdemeanor is misconduct which the law prescribes punishment of no more than one year in prison. Criminal procedures are designed to enforce the constitutional rights of criminal suspects and defendants, starting with initial polic contact and continuing through arrest, investigation, trial, sentencing, and appeals.",
+                "summary": "Crimes are usually categorized as misdemeanors or felonies. A felony is a serious misconduct that is punishable by death or by imprisonment for more than one year. A misdemeanor is misconduct which the law prescribes punishment of no more than one year in prison. Criminal procedures are designed to enforce the constitutional rights of criminal suspects and defendants, starting with initial police contact and continuing through arrest, investigation, trial, sentencing, and appeals.",
                 "bullet_points": [
                     {
-                        "id": "1",
+                        "id": "criminal_law_1",
                         "list": [
                             "Drug Crimes",
                             "White Collar Crimes - Fraud Offense",
@@ -65,7 +65,7 @@
                 "summary": "In times like these, it's important to help keep families together. However, José A. Stewart can help you change your immigration status to provide a better life for your family without having to worry about one day being separated. He is registered with the American Immigration Lawyers Association, which seeks justice for immigrants facing deportation.",
                 "bullet_points": [
                     {
-                        "id": "1",
+                        "id": "immigration_law_1",
                         "label": "Our family-based work:",
                         "list": [
                             "Fiance(s) and Parents of US Citizens",
@@ -77,7 +77,7 @@
                         ]
                     },
                     {
-                        "id": "2",
+                        "id": "immigration_law_2",
                         "label": "Our litigation work:",
                         "list": [
                             "Asylum",
@@ -93,7 +93,7 @@
                 "summary": "Personal injury is the area of law that covers accidents and injuries that cause you physical or emotional harm. José A. Stewart can help you get the compensation you need if you've been hurt, and you believe that someone else's wrongful actions led to you being hurt. Medical bills maybe accumulating, and you may be missing work time. Personal injury is usually associated with bodily harm, but can include pain and suffering or emotional trauma.",
                 "bullet_points": [
                     {
-                        "id": "1",
+                        "id": "personal_injury_1",
                         "list": [
                             "Car Accident",
                             "Alcohol - related crashes",
@@ -108,7 +108,7 @@
                 "summary": "The dissolution of marriage involve financial responsibility rights of custody, and the obligation of a family has that belongs in the category of family law. José A. Stewart has experience with divorce cases and helping them be less difficult than what is already is. He can make sure that your rights and interests are protected.",
                 "bullet_points": [
                     {
-                        "id": "1",
+                        "id": "family_law_1",
                         "list": [
                             "Divorce",
                             "Child Support and Custody",
@@ -124,7 +124,7 @@
                 "summary": "José A. Stewart has the experience necessary to help you through a case and facilitate good understanding of the legal process. Mr. Stewart handles the cases listed below:",
                 "bullet_points": [
                     {
-                        "id": "list_1",
+                        "id": "default_1",
                         "label": "Criminal Defense",
                         "hasSub": "false",
                         "list": [
@@ -140,12 +140,12 @@
                         ]
                     },
                     {
-                        "id": "list_2",
+                        "id": "default_2",
                         "label": "Immigration",
                         "hasSub": "true",
                         "list": [
                             {
-                                "id": "sub1",
+                                "id": "default_2_sub_1",
                                 "label": "Our family-based work:",
                                 "sublist": [
                                     "Fiance(s) and Parents of US Citizens",
@@ -157,7 +157,7 @@
                                 ]
                             },
                             {
-                                "id": "sub2",
+                                "id": "default_2_sub_2",
                                 "label": "Our litigation work:",
                                 "sublist": [
                                     "Asylum",
@@ -169,7 +169,7 @@
                         ]
                     },
                     {
-                        "id": "list_3",
+                        "id": "default_3",
                         "label": "Personal Injury",
                         "hasSub": "false",
                         "list": [
@@ -179,7 +179,7 @@
                         ]
                     },
                     {
-                        "id": "list_4",
+                        "id": "default_4",
                         "label": "Family Law",
                         "hasSub": "false",
                         "list": [
@@ -204,24 +204,60 @@
     },
     "contactus": {
         "title": "Contact Us",
-        "phone": "(972)422-8165",
-        "fax": "(972)423-5356",
-        "email": "josestewart@verizon.net",
-        "address1": "1700 Alma Drive Suite 160",
-        "address2": "",
-        "city": "Plano",
-        "state": "TX",
-        "zipcode": "75075",
-        "hours": [
-            {
-                "begin": "Monday",
-                "end": "Friday",
-                "open": "9:00 am",
-                "close": "6:00 pm"
-            }
-        ]
+        "phone": {
+            "label": "Phone",
+            "text": "(972)422-8165"
+        },
+        "fax": {
+            "label": "Fax",
+            "text": "(972)423-5356"
+        },
+        "email": {
+            "label": "Email",
+            "text": "josestewart@verizon.net"
+        },
+        "address1": {
+            "label": "Address",
+            "text": "1700 Alma Drive Suite 160"
+        },
+        "address2": {
+            "label": "Address2",
+            "text": "something"
+        },
+        "city": {
+            "label": "City",
+            "text": "Plano"
+        },
+        "state": {
+            "label": "State",
+            "text": "TX"
+        },
+        "zipcode": {
+            "label": "Zip",
+            "text": "75075"
+        },
+        "hours": {
+            "label": "Hours",
+            "text": [
+                {
+                    "begin": "Monday",
+                    "end": "Friday",
+                    "open": "9:00 am",
+                    "close": "6:00 pm"
+                }
+            ]
+        }
+    },
+    "footer": {
+        "copyright": {
+            "text": "Copyright &copy; 2019 All Rights Reserved."
+        }
     },
     "pageNotFound": {
+        "heroimage": {
+            "high": "./courtroom.jpg",
+            "low": "./courtroom_low.jpg"
+        },
         "title": "404 - Page Not Found",
         "message": "Please check URL and try again."
     }

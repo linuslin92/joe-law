@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import styles from './contactus.scss';
+import styles from './contactus.module.scss';
 import global from '../../src/styles/global.module.scss';
 import Helmet from 'react-helmet';
 import Hero from '../common/hero';
@@ -13,7 +13,7 @@ export default class Contact extends Component {
     }
     render() {
         const CONT = this.state.content;
-        let addr2 = <div>{CONT.address2}</div>;
+        let addr2 = CONT.address2.text;
         return (
             <Fragment>
                 <Helmet>
@@ -22,28 +22,28 @@ export default class Contact extends Component {
                 <Hero src={ this.props.bgImg } srcmin={ this.props.bgImgMin } />
                 <div className={global.paddingcontainer}>
                     <div className={global.formRow}>
-                        <label className={global.label}>Address</label>
-                        <div>{CONT.address1}</div>
-                        {addr2.length && addr2}
-                        <div>{CONT.city}, {CONT.state} {CONT.zipcode}</div>
+                        <label className={global.label}>{CONT.address1.label}</label>
+                        <div>{CONT.address1.text}</div>
+                        {addr2.length ? <div>{addr2}</div>: ''}
+                        <div>{CONT.city.text}, {CONT.state.text} {CONT.zipcode.text}</div>
                     </div>
                     <div className={global.formRow}>
-                        <label className={global.label}>Phone</label>
-                        <div><a className={global.link} href={`tel:+1${CONT.phone}`}>{CONT.phone}</a></div>
+                        <label className={global.label}>{CONT.phone.label}</label>
+                        <div><a className={global.link} href={`tel:+1${CONT.phone.text}`}>{CONT.phone.text}</a></div>
                     </div>
                     <div className={global.formRow}>
-                        <label className={global.label}>Fax</label>
-                        <div>{CONT.fax}</div>
+                        <label className={global.label}>{CONT.fax.label}</label>
+                        <div>{CONT.fax.text}</div>
                     </div>
                     <div className={global.formRow}>
-                        <label className={global.label}>Email</label>
-                        <div><a className={global.link} href={`mailto:{CONT.email}`} target="_blank">{CONT.email}</a></div>
+                        <label className={global.label}>{CONT.email.label}</label>
+                        <div><a className={global.link} href={`mailto:{CONT.email.text}`} target="_blank" rel="noopener noreferrer">{CONT.email.text}</a></div>
                     </div>
                     <div className={global.formRow}>
-                        <label className={global.label}>Business Hours</label>
+                        <label className={global.label}>{CONT.hours.label}</label>
                         {
-                            CONT.hours.map((hr)=>(
-                                <div>
+                            CONT.hours.text.map((hr, i)=>(
+                                <div key={`hr_${i}`}>
                                     <div>{hr.begin} to {hr.end}</div>
                                     <div>{hr.open} - {hr.close}</div>
                                 </div>

@@ -16,7 +16,7 @@ export default class DefaultPractice extends Component {
                 <p>{CONT.summary}</p>
                 {
                     CONT.bullet_points.map((bullet) => (
-                        <div key={bullet.key}>
+                        <div key={bullet.id}>
                             <h2>{bullet.label.toUpperCase()}</h2>
                             <ul className={bullet.hasSub === "true" ? "inline-list":""}>
                                 {
@@ -26,7 +26,7 @@ export default class DefaultPractice extends Component {
                                         } else 
                                         if(typeof li == "object") {
                                             return (
-                                                <li key={`list_${i}`}>
+                                                <li key={li.id}>
                                                     <h3>{li.label}</h3>
                                                     <ul>
                                                     {
@@ -37,6 +37,8 @@ export default class DefaultPractice extends Component {
                                                     </ul>
                                                 </li>
                                             )
+                                        } else {
+                                            return <li key={i}></li>
                                         }
                                     })
                                 }
