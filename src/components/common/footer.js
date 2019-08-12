@@ -12,8 +12,8 @@ export default class Footer extends Component {
                         <span className="nobreak addr">1700 Alma Drive Suite 160, Plano, TX 75075</span>
                         <a className="nobreak" href="tel:+19724228165">(972) 422 - 8165</a>
                     </p>
-                    <p className="copyright" dangerouslySetInnerHTML={{__html: CONT.copyright.text}}></p>
                 </div>
+                <p className="copyright" dangerouslySetInnerHTML={{__html: CONT.copyright.text}}></p>
             </footer>
         )
     }

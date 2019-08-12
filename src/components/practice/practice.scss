@@ -1,3 +1,4 @@
+@import '../../src/styles/variables.scss';
 $linkActive: #4674e5;
 $linkActive1: yellow;
 $white: #fff;
@@ -5,8 +6,7 @@ $dark: rgba(64, 64, 64, 1);
 $lightBg: #f2f2f2;
 .area_menu  {
     width: 100%;
-    padding-top: 2rem;
-    & > ul {
+    > ul {
         display: flex;
         top: 0;
         right: 7rem;
@@ -18,12 +18,8 @@ $lightBg: #f2f2f2;
         box-sizing: border-box;
         margin-bottom: 0;
         > li {
-            border-radius: .5rem .5rem 0 0;
             height: inherit;
-            border: .1rem solid $dark;
             overflow: hidden;
-            margin-left: 1rem;
-            border-bottom-width: 0;
         }
         a {
             text-decoration: none;
@@ -32,28 +28,15 @@ $lightBg: #f2f2f2;
             display: block;
             height: inherit;
             transition: all 500ms linear 50ms;
-            &,
-            &:active,
-            &:visited,
-            &:hover {
-                .areaLabel {
-                    color: #333;
-                }
-                .areaDesc {
-                    color: rgba(64, 64, 64, 1);
-                }
-            }
-            &.active {
-                background-color: $lightBg;
-                .areaLabel {
-                    color: $dark;
-                }
-            }
             &:hover {
                 background-color: rgba(128, 128, 128, 1);
                 .areaLabel {
                     color: $white;
                 }
+            }
+            &:focus {
+                outline: thin dashed $darkergray;
+                outline-offset: -.4rem;
             }
         }
         .areaLabel {
@@ -70,14 +53,110 @@ $lightBg: #f2f2f2;
 
 @media screen and (min-width: 769px) {
     .area_menu {
+        padding-top: 2rem;
+        > ul {
+            > li {
+                margin-left: 1rem;
+                border-radius: .5rem .5rem 0 0;
+                border-bottom-width: 0;
+                border: .1rem solid $dark;
+            }
+        }
         a {
             padding: .33rem 1.3rem;
+            &,
+            &:active,
+            &:visited,
+            &:hover {
+                .areaLabel {
+                    color: #333;
+                }
+                .areaDesc {
+                    color: rgba(64, 64, 64, 1);
+                }
+            }
+            &.active {
+                background-color: $lightgray;
+                .areaLabel {
+                    color: $textwhite;
+                }
+            }
         }
     }
     .contentBox {
         border: thin solid $dark;
         margin: 0 2.5rem 2.5rem;
-        padding: 2.5rem;
+        padding: 0 2.5rem 0 2.5rem;
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 641px) {
+    .contentBox {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .area_menu {
+        li {
+            white-space: nowrap;
+        }
+        a {
+            &,
+            &:active,
+            &:visited,
+            &:hover {
+                .areaLabel {
+                    color: #333;
+                }
+                .areaDesc {
+                    color: rgba(64, 64, 64, 1);
+                }
+            }
+            &.active {
+                background-color: $darkerwhite;
+                border: thin solid $black;
+                border-bottom: 0;
+            }
+        }
+    }
+}
+@media screen and (min-width: 641px) {
+}
+@media screen and (max-width: 640px) {
+    .area_menu {
+        padding-top: 0;
+        > ul {
+            flex-direction: column;
+            margin-top: 0;
+            > li {
+                width: 100%;
+                margin-left: 0;
+                border-radius: 0;
+                border-bottom: .1rem solid $dark;
+                border-top: 0;
+            }
+        }
+        a {
+            &,
+            &:active,
+            &:visited,
+            &:hover {
+                .areaLabel {
+                    color: #333;
+                }
+                .areaDesc {
+                    color: rgba(64, 64, 64, 1);
+                }
+            }
+            &.active {
+                background-color: $darkgray;
+                .areaLabel {
+                    color: $textwhite;
+                }
+            }
+        }
+    }
+    .contentBox {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
@@ -89,8 +168,11 @@ $lightBg: #f2f2f2;
     }
     .contentBox {
         border: thin solid $dark;
-        margin: 0 2rem 2rem;
-        padding: 2rem;
+        margin-bottom: 2rem;
+        padding: 0 2rem 0 2rem;
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
     }
 }
 
@@ -101,8 +183,6 @@ $lightBg: #f2f2f2;
         }
     }
     .contentBox {
-        border: thin solid $dark;
-        margin: 0 1rem 1rem;
-        padding: 1.5rem;
+        padding: 0 1.5rem 0 1.5rem;
     }
 }

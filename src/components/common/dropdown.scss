@@ -18,12 +18,14 @@ $optionHoverColor: #aaa;
         flex: 0 0 2.4rem;
         font-size: 1.4rem;
         border: thin solid transparent;
+        cursor: pointer;
         &:focus {
             border-color: $white;
             border-style: dotted;
         }
     }
     .dropdownOptions {
+        display: none;
         list-style-type: none;
         margin: unset;
         padding: unset;
@@ -31,6 +33,8 @@ $optionHoverColor: #aaa;
         flex: 0 1 0%;
         border-radius: 0 0 .5rem .5rem;
         overflow: hidden;
+        position: absolute;
+        margin-top: 2.9rem;
         > li {
             flex: 0 0 3rem;
             padding: .3rem 1rem;
@@ -39,14 +43,21 @@ $optionHoverColor: #aaa;
             overflow: hidden;
             line-height: 3rem;
             font-size: 1.4rem;
-            &:hover {
+            &:not(:last-child) {
+                border-bottom: thin solid $gray;
+            }
+            &:hover,
+            &:focus {
                 background-color: $optionHoverColor;
+                text-shadow: 1px 1px 2px $lightergray;
+                color: $blue;
             }
         }
     }
     .dropdownSelect.open {
         border-radius: .5rem .5rem 0 0;
         + .dropdownOptions {
+            display: block;
             flex: 1 0 auto;
             box-shadow: 2px 2px 6px 0 $selectColor;
             > li {

@@ -1,0 +1,40 @@
+@import '../../src/styles/variables.scss';
+.disc {
+    list-style-type: disc;
+}
+.inlinelist {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.inlinetitle {
+    margin-bottom: 0rem;
+}
+.flexlist {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.flexitem {
+    margin-bottom: 2rem;
+}
+@media (min-width: 641px) {
+    .flexlist {
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+    }
+    .flexitem {
+        flex: 1 0 45%;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+@media (max-width: 640px) {
+    .flexitem {
+        flex: 0 100%;
+        &:not(:last-child) {
+            border-bottom: thin solid $lightgray;
+            padding-bottom: 1.5rem;
+        }
+    }
+}

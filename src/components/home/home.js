@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 import Hero from '../common/hero';
 import Badges from '../common/badges';
 
-import './home.scss';
+import styles from './home.module.scss';
 import global from '../../src/styles/global.module.scss';
 
 export default class Home extends Component {
@@ -27,9 +27,9 @@ export default class Home extends Component {
                 </Helmet>
                 <Hero src={ this.props.bgImg } srcmin={ this.props.bgImgMin } />
                 <div className={global.paddingcontainer}>
-                    <h2>{CONT.intro.heading}</h2>
-                    <q>{CONT.intro.quotation}</q>
-                    <span> - {CONT.intro.author}</span>
+                    <h2 className={`${global.heading2} ${global.textcenter} ${global.textshadow6}`}>{CONT.intro.heading}</h2>
+                    <q className={global.quote}>{CONT.intro.quotation}</q>
+                    <div className={styles.author}> - {CONT.intro.author}</div>
                 </div>
                 <Badges array={ badges } className={global.paddingcontainer} />
                 {/* <Badges array={ affiliates } heading="Media Affliates" /> */}

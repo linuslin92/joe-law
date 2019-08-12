@@ -34,10 +34,6 @@ class Navbar extends Component {
         ]
     };
 
-    eventHandler(e) {
-        console.log('clicked', e, e.target);
-    };
-
     selectLanguage = (str) => {
         this.setState({
             lang: {
@@ -56,7 +52,7 @@ class Navbar extends Component {
         let LOGO = this.state.content.logo;
         let MENU = this.state.content.menu;
         let logo = getImage(LOGO.src);
-
+        
         return (
             <header>
                 <div className={`${global.container}`}>

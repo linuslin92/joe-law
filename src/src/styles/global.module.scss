@@ -18,11 +18,22 @@
 .heading5 {
     font-size: $h5;
 }
-
 .label {
     font-size: $text;
 }
-
+.heading1,
+.heading2,
+.heading3,
+.heading4,
+.heading5,
+.paragraph,
+.label,
+.quote {
+    color: $black;
+}
+.textcenter {
+    text-align: center;
+}
 .link {
     text-decoration: none;
     transition: color 500ms ease-in-out 50ms;
@@ -36,11 +47,20 @@
         color: $hoverblue;
     }
 }
-
+.quote {
+    display: inherit;
+    width: inherit;
+    font-style: italic;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    background: $darkerwhite;
+}
+.textshadow6 {
+    text-shadow: 1px 1px 6px $darkergray;
+}
 .whitebackground {
     background-color: $white;
 }
-
 .paddingb5 {
     padding-bottom: .5rem;
 }
@@ -49,20 +69,55 @@
 .formrow {
     margin-bottom: 2.5rem;
 }
-.paddingcontainer {
-    @media (min-width:1200px) {
+/* two */
+@media (min-width: 1200px) {
+    .paddingcontainer {
         padding: 0 3rem;
     }
-    @media (max-width:1199px) and (min-width:1024px) {
+}
+@media (max-width: 1199px) {
+    
+}
+@media (max-width: 1199px) and (min-width: 1024px) {
+    .paddingcontainer {
         padding: 0 2.5rem;
     }
-    @media (max-width:1023px) and (min-width:768px) {
+}
+@media (min-width: 1024px) {
+
+}
+@media (max-width: 1023px) {
+
+}
+@media (max-width: 1023px) and (min-width: 768px) {
+    .paddingcontainer {
         padding: 0 2rem;
     }
-    @media (max-width:767px) and (min-width:640px) {
+}
+@media (min-width: 768px) {
+    .quote {
+        font-size: 3.2rem;
+    }
+}
+@media (max-width: 767px) {
+    .quote {
+        font-size: 2.8rem;
+    }
+}
+@media (max-width: 767px) and (min-width: 640px) {
+    .paddingcontainer {
         padding: 0 1.5rem;
     }
-    @media (max-width:639px) and (min-width:320px) {
+}
+@media (min-width: 640px) {
+
+}
+@media (max-width: 639px) {
+    .paddingcontainer {
         padding: 0 0rem;
+        > :not(.full-bleed) {
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+        }
     }
 }

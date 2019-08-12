@@ -222,7 +222,7 @@
         },
         "address2": {
             "label": "Address2",
-            "text": "something"
+            "text": ""
         },
         "city": {
             "label": "City",

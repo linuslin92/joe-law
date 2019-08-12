@@ -21,7 +21,10 @@ export default class FileNotFound extends Component {
                 <Helmet>
                     <title>{CONT.title}</title>
                 </Helmet>
-                <Hero src={ this.props.bgImg } srcmin={ this.props.bgImgMin } />
+                {   this.props.bgImg ?
+                        <Hero src={ this.props.bgImg } srcmin={ this.props.bgImgMin } />:
+                        ''
+                }
                 <div className={global.paddingcontainer}>
                     <h1>{CONT.title}</h1>
                     <p>{CONT.message}</p>

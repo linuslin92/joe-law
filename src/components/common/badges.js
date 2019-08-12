@@ -21,7 +21,6 @@ export default class Badges extends Component {
                             )
                         })
                     }
-                    <li></li>
                 </ul>
             </div>
         )

@@ -26,8 +26,7 @@ export default class Dropdown extends Component {
     };
     
     render() {
-        const clickevent = (e) => { 
-            this.props.handler(e);
+        const clickevent = (e) => {
             this.toggleOpen();
             let target = e.target;
             this.setState({
@@ -40,9 +39,8 @@ export default class Dropdown extends Component {
         
         return (
             <LanguageContext.Consumer>
-                {context=>(
+                {lang=>(
                     <div className="dropdown" style={ this.props.style }>
-                        {console.log(context.switch('es'))}
                         <input 
                             className="dropdownSelect" 
                             readOnly 
@@ -54,7 +52,7 @@ export default class Dropdown extends Component {
                             {
                                 this.props.data.options.map(option=>{
                                     return (
-                                        <li value={ option.value } key={ option.id } data-option-id={ option.id } onClick={ clickevent }>
+                                        <li tabIndex="0" value={ option.value } key={ option.id } data-option-id={ option.id } onClick={(e)=>{ clickevent(e); lang.switch(option.value)}}>
                                             { option.label }
                                         </li>
                                     )

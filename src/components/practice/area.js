@@ -4,12 +4,14 @@ import CriminalLaw from './areas/criminaldefense';
 import FamilyLaw from './areas/familylaw';
 import ImmigrationLaw from './areas/immigrationlaw';
 import PersonalInjury from './areas/personalinjury';
+import FileNotFound from '../pagenotfound/pagenotfound';
 
 const components = {
     criminal_law: CriminalLaw,
     family_law: FamilyLaw,
     immigration_law: ImmigrationLaw,
-    personal_injury: PersonalInjury
+    personal_injury: PersonalInjury,
+    pageNotFound: FileNotFound
 }
 
 export default class Area extends Component {
@@ -30,10 +32,12 @@ export default class Area extends Component {
         }
     }
     render() {
-        let Comp = components[this.state.area];
-        let area = this.state.content.areas;
+        let found = Object.keys(components).indexOf(this.state.area) > -1;
+        let key = found ? this.state.area : 'pageNotFound';
+        let Comp = components[key];
+        let area = found ? this.state.content.areas[key] : this.state.content.pagenotfound;
         return (
-            <Comp content={area[this.state.area]} />
+            <Comp content={area} />
         )
     }
 }
