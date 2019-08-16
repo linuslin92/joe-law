@@ -54,7 +54,7 @@ export default class Contact extends Component {
                                 }
                             </div>
                         </div>
-                        <div className={layout.flex6}>
+                        {/*<div className={layout.flex6}>
                             <form>
                                 <div className={styles.formrow}>
                                     <label className={global.label}>Family Name</label>
@@ -66,7 +66,7 @@ export default class Contact extends Component {
                                     <input className={global.forminput} name="firstname" placeholder="Last Name / Family Name" required/>
                                 </div>
                             </form>
-                        </div>
+                        </div>*/}
                     </div>
                 </div>
             </Fragment>
