@@ -30,6 +30,10 @@
     },
     "home": {
         "title": "Inicio",
+        "hero": {
+            "high": "./mallet_high.jpg",
+            "low": "./mallet_low.jpg"
+        },
         "intro": {
             "heading": "Más de 30 años con experiencia",
             "quotation": "Cuando se trata de justiciá, yo busco una estrategia legal y lo sigo hasta el final.",
@@ -38,6 +42,10 @@
     },
     "practice": {
         "title": "Áreas de Práctica",
+        "hero": {
+            "high": "./justice_high.jpg",
+            "low": "./justice_low.jpg"
+        },
         "areas": 
         {
             "criminal_law": {
@@ -193,6 +201,10 @@
     },
     "bio": {
         "title": "José A. Stewart",
+        "hero": {
+            "high": "./joselaw_high.jpg",
+            "low": "./joselaw_low.jpg"
+        },
         "content": [
             "Mi nombre es José A. Stewart, y durante más de 30 años, mi oficina ha ayudado a Tejanos de todos los caminos de la vida a buscar justiciá e igualdad.",
             "Mi bufete no sigue el mismo camino de las firmas grandes, por una rason. Yo les ofresco a mis clientes atención de uno a uno para obener un entendimiento mas profundo de su caso. De esté modo puedo crear una relación duradera con mis clientes.",
@@ -202,6 +214,10 @@
     },
     "contactus": {
         "title": "Contáctanos",
+        "hero": {
+            "high": "./handshake_high.jpg",
+            "low": "./handshake_low.jpg"
+        },
         "phone": {
             "label": "Telefono",
             "text": "(972)422-8165"
@@ -248,15 +264,15 @@
     },
     "footer": {
         "copyright": {
-            "text": "Copyright &copy; 2019 Todos los Derechos Reservados."
+            "text": "&copy; 2019 Copyright - Todos los Derechos Reservados."
         }
     },
     "pageNotFound": {
-        "heroimage": {
+        "title": "404 - Documento No encontrado",
+        "hero": {
             "high": "./courtroom.jpg",
             "low": "./courtroom_low.jpg"
         },
-        "title": "404 - Documento No encontrado",
         "message": "Verifique la URL e intente nuevamente."
     }
 }

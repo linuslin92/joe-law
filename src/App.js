@@ -32,12 +32,52 @@ function App() {
                 <Navbar content={content.pack.navbar} />
                 <div>
                   <Switch>
-                    <Route path="/home" component={()=>(<Container><Home bgImg={images('./mallet_high.jpg')} bgImgMin={images('./mallet_low.jpg')} content={content.pack.home} /></Container>)} />
-                    <Route path="/practice" component={()=>(<Container><Practice bgImg={images('./justice_high.jpg')} bgImgMin={images('./justice_low.jpg')} content={{...content.pack.practice, pagenotfound: content.pack.pageNotFound}} /></Container>)} />
-                    <Route path="/bio" component={()=>(<Container><Bio content={content.pack.bio} /></Container>)} />
-                    <Route path="/contact" component={()=>(<Container><Contact bgImg={images('./handshake_high.jpg')} bgImgMin={images('./handshake_low.jpg')} content={content.pack.contactus} /></Container>)} />
-                    <Route path="/" exact component={()=><Redirect to="/home"></Redirect>} />
-                    <Route component={()=>(<Container><PageNotFound content={content.pack.pageNotFound} bgImg={images(content.pack.pageNotFound.heroimage.high)} bgImgMin={images(content.pack.pageNotFound.heroimage.low)} /></Container>)} />
+                    <Route path="/home" component={()=>(
+                      <Container>
+                        <Home 
+                          content={content.pack.home} 
+                          bgImg={images(content.pack.home.hero.high)} 
+                          bgImgMin={images(content.pack.home.hero.low)} 
+                        />
+                      </Container>)} 
+                    />
+                    <Route path="/practice" component={()=>(
+                      <Container>
+                        <Practice 
+                          content={{...content.pack.practice, pagenotfound: content.pack.pageNotFound}} 
+                          bgImg={images(content.pack.practice.hero.high)} 
+                          bgImgMin={images(content.pack.practice.hero.low)} 
+                        />
+                      </Container>)} 
+                    />
+                    <Route path="/bio" component={()=>(
+                      <Container>
+                        <Bio 
+                          content={content.pack.bio} 
+                          bgImg={images(content.pack.bio.hero.high)} 
+                          bgImgMin={images(content.pack.bio.hero.low)} 
+                        />
+                      </Container>)} 
+                    />
+                    <Route path="/contact" component={()=>(
+                      <Container>
+                        <Contact 
+                          content={content.pack.contactus} 
+                          bgImg={images(content.pack.contactus.hero.high)} 
+                          bgImgMin={images(content.pack.contactus.hero.low)} 
+                        />
+                      </Container>)} 
+                    />
+                    <Route path="/" exact component={()=>(<Redirect to="/home"></Redirect>)} />
+                    <Route component={()=>(
+                      <Container>
+                        <PageNotFound 
+                          content={content.pack.pageNotFound} 
+                          bgImg={images(content.pack.pageNotFound.hero.high)} 
+                          bgImgMin={images(content.pack.pageNotFound.hero.low)} 
+                        />
+                      </Container>)} 
+                    />
                   </Switch>
                 </div>
                 <Footer content={content.pack.footer} />

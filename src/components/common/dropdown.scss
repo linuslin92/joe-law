@@ -16,7 +16,7 @@ $optionHoverColor: #aaa;
         padding: .1rem .8rem .1rem;
         color: $selectColor;
         flex: 0 0 2.4rem;
-        font-size: 1.4rem;
+        font-size: $textsmall;
         border: thin solid transparent;
         cursor: pointer;
         &:focus {
@@ -42,7 +42,7 @@ $optionHoverColor: #aaa;
             display: block;
             overflow: hidden;
             line-height: 3rem;
-            font-size: 1.4rem;
+            font-size: $textsmall;
             &:not(:last-child) {
                 border-bottom: thin solid $gray;
             }

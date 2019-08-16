@@ -7,6 +7,7 @@ import Area from './area';
 import DefaultPractice from './defaultpractice';
 
 import './practice.scss';
+import global from '../../src/styles/global.module.scss';
 
 const image = require.context('../../src/img', true);
 
@@ -57,22 +58,22 @@ export default class Practice extends Component {
                 <Router>
                     <div className="area_menu">
                         <ul role="tablist" aria-labelledby="practice_header">
-                            <li>
+                            <li className={global.listitem}>
                                 <Link to="/practice/criminal_law" activeClassName="active" role="tab" onClick={this.updateImage}>
                                     <label className="areaLabel">{CONT.areas.criminal_law.title}</label>
                                 </Link>
                             </li>
-                            <li>
+                            <li className={global.listitem}>
                                 <Link to="/practice/family_law" activeClassName="active" role="tab" onClick={this.updateImage}>
                                     <label className="areaLabel">{CONT.areas.family_law.title}</label>
                                 </Link>
                             </li>
-                            <li>
+                            <li className={global.listitem}>
                                 <Link to="/practice/immigration_law" activeClassName="active" role="tab" onClick={this.updateImage}>
                                     <label className="areaLabel">{CONT.areas.immigration_law.title}</label>
                                 </Link>
                             </li>
-                            <li>
+                            <li className={global.listitem}>
                                 <Link to="/practice/personal_injury" activeClassName="active" role="tab" onClick={this.updateImage}>
                                     <label className="areaLabel">{CONT.areas.personal_injury.title}</label>
                                 </Link>

@@ -4,3 +4,16 @@
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 }
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex6 {
+    @media (min-width: 768px) {
+        flex: 0 1 50%;
+    }
+    @media (max-width: 767px) {
+        flex: 0 1 100%;
+    }
+}

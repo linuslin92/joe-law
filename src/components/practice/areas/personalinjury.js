@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 
+import global from '../../../src/styles/global.module.scss';
 export default class PersonalInjury extends Component {
     constructor(props) {
         super(props);
@@ -11,18 +12,18 @@ export default class PersonalInjury extends Component {
         let CONT = this.state.content;
         return (
             <Fragment>
-                <h2>{CONT.label}</h2>
-                <p>{CONT.summary}</p>
+                <h2 className={global.heading4}>{CONT.label}</h2>
+                <p className={global.description}>{CONT.summary}</p>
                 {
                     CONT.bullet_points.map((bullet)=>{
                         return (
                             <div key={bullet.id}>
-                                <label>{bullet.label}</label>
+                                <label className={global.label}>{bullet.label}</label>
                                 <ul>
                                     {
                                         bullet.list.map((li, j)=>{
                                             return (
-                                                <li key={`list_${j}`}>{li}</li>
+                                                <li className={global.listitem} key={`list_${j}`}>{li}</li>
                                             )
                                         })
                                     }

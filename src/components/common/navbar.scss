@@ -5,7 +5,7 @@ header {
     position: fixed;
     z-index: 1060;
     > div {
-        font-size: 2rem;
+        font-size: $textregular;
         display: flex;
         justify-content: space-between;
         position: relative;
@@ -32,12 +32,18 @@ header {
                 padding: 0;
                 white-space: nowrap;
             }
+            li {
+                &:hover,
+                &:focus {
+                    background-color: $hoverblue;
+                }
+            }
         }
         .dropdown {
             box-sizing: border-box;
             padding: 1.5rem 1rem;
             align-self: center;
-            flex: 0 90px;
+            flex: 0 95px;
             .dropdownSelect {
                 background-color: transparent;
                 color: #eee;
@@ -78,13 +84,8 @@ header {
 .menu a {
     display: inline-block;
     height: 100%;
-    padding: 0 2rem;
     text-decoration: none;
     transition: background-color 500ms linear 50ms;
-    &:hover,
-    &:focus {
-        background-color: $hoverblue;
-    }
     &.active {
         &,
         &:visited,
@@ -105,6 +106,16 @@ header {
     &:focus {
         outline: thin dashed $white;
         outline-offset: -4px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .menu a {
+        padding: 0 1.5rem;
+    }
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .menu a {
+        padding: 0 .75rem;
     }
 }
 
@@ -205,11 +216,13 @@ header {
             margin: 1.5rem 0 0;
         }
         li {
-            width: 100%;
+            width: inherit;
             z-index: 1040;
             &:not(:last-child) {
                 border-bottom: thin solid rgba(200, 200, 200, .8);
             }
+            padding-left: 1rem;
+            padding-right: 1rem;
             > a {
                 display: inline-block;
                 box-sizing: border-box;

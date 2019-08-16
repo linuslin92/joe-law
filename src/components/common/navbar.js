@@ -49,8 +49,9 @@ class Navbar extends Component {
             let $btn = $menu.childNodes.values().next().value;
             $btn.classList.toggle('active');
         }
+        let CONT = this.props.content;
         let LOGO = this.state.content.logo;
-        let MENU = this.state.content.menu;
+        let MENU = CONT.menu;
         let logo = getImage(LOGO.src);
         
         return (

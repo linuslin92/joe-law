@@ -19,7 +19,7 @@
     font-size: $h5;
 }
 .label {
-    font-size: $text;
+    font-size: $textregular;
 }
 .heading1,
 .heading2,
@@ -54,6 +54,24 @@
     padding: 2.5rem;
     border-radius: 1rem;
     background: $darkerwhite;
+    :first-letter {
+        font-size: 5rem;
+    }
+}
+.description {
+    text-indent: 2.5rem;
+}
+.inlinetext,
+.listitem,
+.description,
+.formtext {
+    font-size: $textregular;
+    line-height: $lineregular;
+}
+.label {
+    font-size: $textemphasis;
+    line-height: $lineemphasis;
+    font-weight: $bold;
 }
 .textshadow6 {
     text-shadow: 1px 1px 6px $darkergray;
@@ -69,10 +87,13 @@
 .formrow {
     margin-bottom: 2.5rem;
 }
+.formtext {
+    padding-left: 1rem;
+}
 /* two */
 @media (min-width: 1200px) {
     .paddingcontainer {
-        padding: 0 3rem;
+        padding: 3rem;
     }
 }
 @media (max-width: 1199px) {
@@ -80,7 +101,7 @@
 }
 @media (max-width: 1199px) and (min-width: 1024px) {
     .paddingcontainer {
-        padding: 0 2.5rem;
+        padding: 2.5rem;
     }
 }
 @media (min-width: 1024px) {
@@ -91,7 +112,7 @@
 }
 @media (max-width: 1023px) and (min-width: 768px) {
     .paddingcontainer {
-        padding: 0 2rem;
+        padding: 2rem;
     }
 }
 @media (min-width: 768px) {
@@ -106,7 +127,7 @@
 }
 @media (max-width: 767px) and (min-width: 640px) {
     .paddingcontainer {
-        padding: 0 1.5rem;
+        padding: 1.5rem;
     }
 }
 @media (min-width: 640px) {
@@ -114,7 +135,7 @@
 }
 @media (max-width: 639px) {
     .paddingcontainer {
-        padding: 0 0rem;
+        padding: 0rem;
         > :not(.full-bleed) {
             margin-left: 1.5rem;
             margin-right: 1.5rem;
