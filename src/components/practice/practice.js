@@ -34,7 +34,10 @@ export default class Practice extends Component {
         return (
             <Fragment>
                 <Helmet>
-                    <title>{CONT.title}</title>
+                    <title>{CONT.title} | {CONT.sitename}</title>
+                    <meta 
+                        name="description" 
+                        content={CONT.meta.description} />
                     <style>{`
                         @media (min-width: 768px) {
                             .hero-image {

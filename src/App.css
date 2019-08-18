@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   background: linear-gradient(45deg, rgba(225, 225, 225, .3), rgba(200, 200, 200, .5), rgba(175, 175, 175, .2));
-  font-family: "Alegreya, sans-serif";
+  font-family: "Alegreya, serif";
   letter-spacing: .1rem;
 }
 

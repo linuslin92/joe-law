@@ -1,4 +1,6 @@
 {
+    "lang": "en",
+    "sitename": "Law office of José A. Stewart",
     "navbar": {
         "logo": {
             "src": "./img/jose-law.png",
@@ -29,7 +31,11 @@
         ]
     },
     "home": {
-        "title": "Home",
+        "title": "Over 30 Years of Experience",
+        "meta": {
+            "description": "José A. Stewart attorney has over 30 years of experience dedicated to provide exceptional legal consulting services.",
+            "tags":""
+        },
         "hero": {
             "high": "./mallet_high.jpg",
             "low": "./mallet_low.jpg"
@@ -41,7 +47,10 @@
         }
     },
     "practice": {
-        "title": "Practice Area",
+        "title": "Criminal Defense | Family Law | Immigration Law | Personal Injury",
+        "meta": {
+            "description": "Jóse A. Stewart attorney, providing legal services in criminal defense, family law, immigration law, and personal injury."
+        },
         "hero": {
             "high": "./justice_high.jpg",
             "low": "./justice_low.jpg"
@@ -49,7 +58,10 @@
         "areas": 
         {
             "criminal_law": {
-                "title": "Criminal Law",
+                "title": "Criminal Defense",
+                "meta": {
+                    "description": ""
+                },
                 "summary": "Crimes are usually categorized as misdemeanors or felonies. A felony is a serious misconduct that is punishable by death or by imprisonment for more than one year. A misdemeanor is misconduct which the law prescribes punishment of no more than one year in prison. Criminal procedures are designed to enforce the constitutional rights of criminal suspects and defendants, starting with initial police contact and continuing through arrest, investigation, trial, sentencing, and appeals.",
                 "bullet_points": [
                     {
@@ -70,6 +82,9 @@
             },
             "immigration_law": {
                 "title": "Immigration Law",
+                "meta": {
+                    "description": ""
+                },
                 "summary": "In times like these, it's important to help keep families together. However, José A. Stewart can help you change your immigration status to provide a better life for your family without having to worry about one day being separated. He is registered with the American Immigration Lawyers Association, which seeks justice for immigrants facing deportation.",
                 "bullet_points": [
                     {
@@ -98,6 +113,9 @@
             },
             "personal_injury": {
                 "title": "Personal Injury",
+                "meta": {
+                    "description": ""
+                },
                 "summary": "Personal injury is the area of law that covers accidents and injuries that cause you physical or emotional harm. José A. Stewart can help you get the compensation you need if you've been hurt, and you believe that someone else's wrongful actions led to you being hurt. Medical bills maybe accumulating, and you may be missing work time. Personal injury is usually associated with bodily harm, but can include pain and suffering or emotional trauma.",
                 "bullet_points": [
                     {
@@ -113,6 +131,9 @@
             },
             "family_law": {
                 "title": "Family Law",
+                "meta": {
+                    "description": ""
+                },
                 "summary": "The dissolution of marriage involve financial responsibility rights of custody, and the obligation of a family has that belongs in the category of family law. José A. Stewart has experience with divorce cases and helping them be less difficult than what is already is. He can make sure that your rights and interests are protected.",
                 "bullet_points": [
                     {
@@ -128,7 +149,10 @@
                 ]
             },
             "default": {
-                "title": "Practice Area",
+                "title": "Practice Areas",
+                "meta": {
+                    "description": ""
+                },
                 "summary": "José A. Stewart has the experience necessary to help you through a case and facilitate good understanding of the legal process. Mr. Stewart handles the cases listed below:",
                 "bullet_points": [
                     {
@@ -202,7 +226,10 @@
         }
     },
     "bio": {
-        "title": "About José A. Stewart",
+        "title": "José A. Stewart",
+        "meta": {
+            "description": ""
+        },
         "hero": {
             "high": "./joselaw_high.jpg",
             "low": "./joselaw_low.jpg"
@@ -215,7 +242,10 @@
         ]
     },
     "contactus": {
-        "title": "Contact Us",
+        "title": "Get Your Free Consultation Today",
+        "meta": {
+            "description": "Contact Us to Get Your Free Consultation Now | (972)422-8165 | Law office of José A. Stewart"
+        },
         "hero": {
             "high": "./handshake_high.jpg",
             "low": "./handshake_low.jpg"
@@ -259,9 +289,20 @@
                     "begin": "Monday",
                     "end": "Friday",
                     "open": "9:00 am",
-                    "close": "6:00 pm"
+                    "close": "6:00 pm",
+                    "to": "to"
                 }
             ]
+        },
+        "form": {
+            "name": "Name",
+            "phone": "Phone",
+            "email": "Email",
+            "subject": "Subject",
+            "description": {
+                "label": "Description",
+                "placeholder": "Brief description"
+            }
         }
     },
     "footer": {
@@ -271,6 +312,9 @@
     },
     "pageNotFound": {
         "title": "404 - Page Not Found",
+        "meta": {
+            "description": ""
+        },
         "hero": {
             "high": "./courtroom.jpg",
             "low": "./courtroom_low.jpg"

@@ -9,7 +9,7 @@ $darkergray:    #333;
 $lightgray:     #aaa;
 $lightergray:   #ccc;
 $badass:        #bada55;
-$hoverblue:     $blue + #222;
+$hoverblue:     lighten($blue, 7%);
 $textwhite:     #eee;
 $darkerwhite:   #f2f2f2;
 $textorange:    #d6ac27;

@@ -23,7 +23,10 @@ export default class Home extends Component {
         return (
             <Fragment>
                 <Helmet>
-                    <title>{CONT.title}</title>
+                    <title>{`${CONT.title} | ${CONT.sitename}`}</title>
+                    <meta 
+                        name="description" 
+                        content={CONT.meta.description} />
                 </Helmet>
                 <Hero src={ this.props.bgImg } srcmin={ this.props.bgImgMin } />
                 <div className={global.paddingcontainer}>

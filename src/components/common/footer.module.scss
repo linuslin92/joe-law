@@ -39,11 +39,25 @@ footer {
         background-color: $darkerwhite;
     }
     .nobreak {
-        white-space: nowrap;
+        @media (min-width: 768px) {
+            white-space: nowrap;
+        }
+        @media (max-width: 767px) {
+            white-space: pre-wrap;
+        }
+        > :nth-child(2) {
+            &:before {
+                content: ', ';
+                display: inline;
+            }
+        }
     }
     .addr {
         display: inline-block;
         width: 100%;
         text-align: center;
+    }
+    .inlineblock {
+        display: inline-block;
     }
 }

@@ -1,6 +1,9 @@
 import React from 'react';
+
 /* Routers */
 import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+
 
 /* Styles */
 import './App.css';
@@ -14,6 +17,7 @@ import Practice from './components/practice/practice';
 import Bio from './components/bio/bio';
 import Contact from './components/contactus/contactus';
 import PageNotFound from './components/pagenotfound/pagenotfound';
+import Seo from './components/common/seo';
 
 /* Content Provider */
 import LanguageContext from './context/languagecontext';
@@ -25,17 +29,19 @@ const images = require.context('./src/img', true);
 function App() {
   return (
     <div className="App">
+        <Seo />
         <LanguageProvider>
           <LanguageContext.Consumer>
             {content=>(
               <Router>
+                <Helmet htmlAttributes={{ lang: content.pack.lang }} />
                 <Navbar content={content.pack.navbar} />
                 <div>
                   <Switch>
                     <Route path="/home" component={()=>(
                       <Container>
                         <Home 
-                          content={content.pack.home} 
+                          content={{...content.pack.home, sitename: content.pack.sitename}} 
                           bgImg={images(content.pack.home.hero.high)} 
                           bgImgMin={images(content.pack.home.hero.low)} 
                         />
@@ -44,7 +50,7 @@ function App() {
                     <Route path="/practice" component={()=>(
                       <Container>
                         <Practice 
-                          content={{...content.pack.practice, pagenotfound: content.pack.pageNotFound}} 
+                          content={{...content.pack.practice, pagenotfound: content.pack.pageNotFound, sitename: content.pack.sitename}} 
                           bgImg={images(content.pack.practice.hero.high)} 
                           bgImgMin={images(content.pack.practice.hero.low)} 
                         />
@@ -53,7 +59,7 @@ function App() {
                     <Route path="/bio" component={()=>(
                       <Container>
                         <Bio 
-                          content={content.pack.bio} 
+                          content={{...content.pack.bio, sitename: content.pack.sitename}} 
                           bgImg={images(content.pack.bio.hero.high)} 
                           bgImgMin={images(content.pack.bio.hero.low)} 
                         />
@@ -62,7 +68,7 @@ function App() {
                     <Route path="/contact" component={()=>(
                       <Container>
                         <Contact 
-                          content={content.pack.contactus} 
+                          content={{...content.pack.contactus, sitename: content.pack.sitename}} 
                           bgImg={images(content.pack.contactus.hero.high)} 
                           bgImgMin={images(content.pack.contactus.hero.low)} 
                         />
@@ -72,7 +78,7 @@ function App() {
                     <Route component={()=>(
                       <Container>
                         <PageNotFound 
-                          content={content.pack.pageNotFound} 
+                          content={{...content.pack.pageNotFound, sitename: content.pack.sitename}} 
                           bgImg={images(content.pack.pageNotFound.hero.high)} 
                           bgImgMin={images(content.pack.pageNotFound.hero.low)} 
                         />

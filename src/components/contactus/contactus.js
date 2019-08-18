@@ -18,7 +18,7 @@ export default class Contact extends Component {
         return (
             <Fragment>
                 <Helmet>
-                    <title>{CONT.title}</title>
+                    <title>{`${CONT.title} | ${CONT.sitename}`}</title>
                 </Helmet>
                 <Hero src={ this.props.bgImg } srcmin={ this.props.bgImgMin } />
                 <div className={global.paddingcontainer}>
@@ -47,7 +47,7 @@ export default class Contact extends Component {
                                 {
                                     CONT.hours.text.map((hr, i)=>(
                                         <div className={global.formtext} key={`hr_${i}`}>
-                                            <div>{hr.begin} to {hr.end}</div>
+                                            <div>{hr.begin} {hr.to} {hr.end}</div>
                                             <div>{hr.open} - {hr.close}</div>
                                         </div>
                                     ))
