@@ -295,14 +295,43 @@
             ]
         },
         "form": {
-            "name": "Name",
-            "phone": "Phone",
-            "email": "Email",
-            "subject": "Subject",
+            "label": "Free Consult",
+            "name": {
+                "label": "Name",
+                "name": "name",
+                "required": "required",
+                "type": "text",
+                "pattern": "[a-zA-Z]{1, 15}"
+            },
+            "phone": {
+                "label": "Phone",
+                "name": "phone",
+                "required": "required",
+                "type": "tel",
+                "pattern": ""
+            },
+            "email": {
+                "label": "Email",
+                "name": "email",
+                "required": "",
+                "type": "email",
+                "pattern": ""
+            },
+            "subject": {
+                "label": "Subject",
+                "name": "subject",
+                "required": "required",
+                "type": "text",
+                "pattern": ""
+            },
             "description": {
-                "label": "Description",
-                "placeholder": "Brief description"
-            }
+                "label": "Enter brief description",
+                "name": "description",
+                "maxLength": "300",
+                "required": "required"
+            },
+            "submit": "Submit",
+            "clear": "Clear"
         }
     },
     "footer": {

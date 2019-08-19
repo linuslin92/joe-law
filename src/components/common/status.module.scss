@@ -1,0 +1,40 @@
+@import '../../src/styles/variables.scss';
+.status {
+    height: 4rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    color: $white;
+    font-size: $textregular;
+    line-height: $lineregular;
+    align-items: center;
+    display: inline-flex;
+    padding-left: 1.5rem;
+    &:before {
+        content: '';
+        height: 3rem;
+        width: 3rem;
+        position: relative;
+        display: inline-block;
+        margin-right: 2rem;
+    }
+}
+
+.statuswarning {
+    background-color: $textorange;
+}
+
+.statuserror {
+    background-color: $textred;
+}
+
+.statusokay {
+    background-color: $textgreen;
+}
+
+.display {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}

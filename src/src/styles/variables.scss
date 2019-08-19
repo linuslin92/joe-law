@@ -12,7 +12,9 @@ $badass:        #bada55;
 $hoverblue:     lighten($blue, 7%);
 $textwhite:     #eee;
 $darkerwhite:   #f2f2f2;
-$textorange:    #d6ac27;
+$textorange:    #ea3;
+$textred:       #c33;
+$textgreen:     #3a3;    
 
 /* FONTS */
 $h1:    4.8rem;
@@ -31,5 +33,5 @@ $bold: 600;
 
 /* BORDER */
 $border: thin solid $lightgray;
-
+$borderradius: 3px;
 

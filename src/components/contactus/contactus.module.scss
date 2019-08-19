@@ -2,3 +2,42 @@
 .display-card {
     background-color: $gray;
 }
+
+.input,
+.textarea {
+    background-color: rgba(225, 225, 220, .7);
+}
+
+.flex {
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: 767px) {
+        flex-wrap: wrap;
+    }
+}
+.button {
+    @media (max-width: 767px) {
+        flex: 1 100%;
+        &:not(:first-child) {
+            margin-top: 2rem;
+        }
+    }
+    @media (min-width: 768px) {
+        flex: 1 auto;
+        &:not(:first-child) {
+            margin-left: 1.5rem;
+        }
+    }
+}
+.workcount {
+    top: -2rem;
+    text-align: right;
+    position: relative;
+    padding-right: .5rem;
+    &:before {
+        content: attr(textnum) ' chars left';
+        font-size: $textsmall;
+        font-style: italic;
+        color: $darkgray;
+    }
+}

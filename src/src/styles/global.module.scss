@@ -64,7 +64,12 @@
 .inlinetext,
 .listitem,
 .description,
-.formtext {
+.formtext,
+.input,
+.input::placeholder,
+.textarea,
+.textarea::placeholder,
+.button {
     font-size: $textregular;
     line-height: $lineregular;
 }
@@ -90,7 +95,47 @@
 .formtext {
     padding-left: 1rem;
 }
-/* two */
+.input {
+    width: 100%;
+    height: 4rem;
+    border-radius: 3px;
+    padding: 1.2rem 1.8rem;
+    border: thin solid $darkgray;
+}
+.textarea {
+    width: 100%;
+    min-height: 20rem;
+    border-radius: 3px;
+    padding: 1.2rem 1.8rem;
+    border: thin solid $darkgray;
+    resize: none;
+}
+.button {
+    height: 4rem;
+    padding: 1.2rem 1.5rem;
+    background-color: $blue;
+    border: thin solid $blue;
+    color: $white;
+    border-radius: 3px;
+    line-height: .8;
+    min-width: 10rem;
+    outline-offset: -.5rem;
+    &:focus {
+        outline: thin dashed $white;
+    }
+}
+.ghostlybutton {
+    background-color: rgba(225, 225, 220, .7);
+    border-color: $darkgray;
+    color: $darkgray;
+    outline-offset: -.5rem;
+    &:focus {
+        outline: thin dashed $darkgray;
+    }
+}
+::placeholder {
+    font-style: italic;
+}
 @media (min-width: 1200px) {
     .paddingcontainer {
         padding: 3rem;
