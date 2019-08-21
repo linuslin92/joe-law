@@ -297,34 +297,47 @@
                 "label": "Nombre",
                 "name": "name",
                 "required": "required",
-                "type": "text",
-                "pattern": ""
+                "type": "text"
             },
             "phone": {
                 "label": "Telefono",
                 "name": "phone",
                 "required": "required",
-                "type": "tel",
-                "pattern": ""
+                "type": "tel"
             },
             "email": {
                 "label": "Email",
                 "name": "email",
                 "required": "",
-                "type": "email",
-                "pattern": ""
+                "type": "email"
             },
             "subject": {
                 "label": "Subject",
                 "name": "subject",
                 "required": "required",
-                "type": "text",
-                "pattern": ""
+                "options": [
+                    {
+                        "value": "Criminal Defense",
+                        "label": "Criminal Defense"
+                    },
+                    {
+                        "value": "Family Law",
+                        "label": "Family Law"
+                    },
+                    {
+                        "value": "Immigration Law",
+                        "label": "Immigration Law"
+                    },
+                    {
+                        "value": "Personal Injury",
+                        "label": "Personal Injury"
+                    }
+                ]
             },
             "description": {
                 "label": "Enter brief description",
                 "name": "description",
-                "maxLength": "300",
+                "maxLength": "400",
                 "required": "required"
             },
             "submit": "Submit",

@@ -67,6 +67,7 @@
 .formtext,
 .input,
 .input::placeholder,
+.select,
 .textarea,
 .textarea::placeholder,
 .button {
@@ -99,16 +100,30 @@
     width: 100%;
     height: 4rem;
     border-radius: 3px;
-    padding: 1.2rem 1.8rem;
+    padding: 1rem 1.8rem;
     border: thin solid $darkgray;
 }
 .textarea {
     width: 100%;
     min-height: 20rem;
     border-radius: 3px;
-    padding: 1.2rem 1.8rem;
+    padding: 1rem 1.8rem;
     border: thin solid $darkgray;
     resize: none;
+}
+.select {
+    width: 100%;
+    height: 4rem;
+    border-radius: 3px;
+    padding: 1rem 1.8rem;
+    border: thin solid $darkgray;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    line-height: 1;
+}
+.select::-ms-expand {
+    display: none;
 }
 .button {
     height: 4rem;

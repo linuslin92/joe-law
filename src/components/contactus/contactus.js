@@ -15,8 +15,15 @@ export default class Contact extends Component {
             textcount: this.props.content.form.description.maxLength,
             status: {
                 type: 'okay',
-                display: true,
+                display: false,
                 message: 'Please enter required fields.'
+            },
+            formdata: {
+                name: '',
+                phone: '',
+                email: '',
+                subject: '',
+                description: ''
             }
         }
     }
@@ -24,6 +31,8 @@ export default class Contact extends Component {
         let timeout = 0;
         if(e.type === 'reset') {
             timeout = 50;
+        } else {
+            this.keyin(e);
         }
         setTimeout(() => {
             const $count = document.querySelector('#wordcount');
@@ -31,23 +40,92 @@ export default class Contact extends Component {
             $count.setAttribute("textnum", $ta.maxLength - $ta.textLength);
         }, timeout)
     }
+    disableall = () => {
+        let state = this.state.formdata;
+        let keys = Object.keys(state);
+        let form = document.querySelector('form');
+        console.log(keys, form);
+        keys.map((k) => {
+            form[k].disabled = true;
+        });
+    }
+    enableall = () => {
+        let state = this.state.formdata;
+        let keys = Object.keys(state);
+        let form = document.querySelector('form');
+        keys.map((k) => {
+            form[k].disabled = false;
+        })
+    }
     formsubmit = (e) => {
         e.preventDefault();
-        const data = new FormData(e.target);
-
+        let data = this.state.formdata;
+        this.disableall();
         fetch('/cgi-bin/contactus.php', {
-            method: 'POST',
-            mode: 'cors',
-            credentials: 'include',
+            method: "POST",
+            mode: "same-origin",
+            credentials: "same-origin",
             headers: {
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json"
             },
-            body: data
+            body: JSON.stringify(data)
         })
         .then(data=>data.json())
-        .then((e)=>
-            console.log(e)
-        )
+        .then((e)=> {
+            let formstate = {
+                    display: true,
+                    type: e.success === true ? "okay" : "error",
+                    message: e.message
+                }
+            this.setState({status: formstate});
+            setTimeout(() => {
+                this.setState({
+                    status: {
+                        display: false
+                    }
+                })
+                this.enableall();
+                this.resethandler();
+            }, 10000);
+        })
+        .catch((e)=>{
+            let formstate = {
+                display: true,
+                type: "error",
+                message: "Something went wrong, try again later!"
+            }
+            this.setState({status: formstate});
+            setTimeout(()=>{
+                this.setState({
+                    status: {
+                        display: false
+                    }
+                })
+                this.enableall();
+            }, 10000);
+            console.error(e);
+        });
+
+    }
+    keyin = (e) => {
+        let key = e.target.name;
+        let ref = this.refs[key];
+        let state = this.state.formdata;
+        state[key] = ref.value;
+        this.setState({
+            formdata: state
+        });
+    }
+    resethandler = (e) => {
+        let state = this.state.formdata;
+        let keys = Object.keys(state);
+        keys.map((k)=>{
+            state[k] = '';
+            return true;
+        });
+        this.setState({
+            formdata: state
+        })
     }
     render() {
         const CONT = this.state.content;
@@ -97,12 +175,13 @@ export default class Contact extends Component {
                                 <div className={global.formrow}>
                                     <input 
                                         minLength="5" 
-                                        type={CONT.form.name.type} 
-                                        pattern={CONT.form.name.pattern} 
+                                        type={CONT.form.name.type}
                                         className={`${global.input} ${styles.input}`} 
                                         name={CONT.form.name.name} 
                                         placeholder={`${CONT.form.name.label} ${CONT.form.name.required ? "- (Required)" : ""}`} 
-                                        required={CONT.form.name.required} />
+                                        required={CONT.form.name.required}
+                                        onInput={this.keyin} 
+                                        ref="name" />
                                 </div>
 
                                 <div className={global.formrow}>
@@ -112,7 +191,9 @@ export default class Contact extends Component {
                                         className={`${global.input} ${styles.input}`} 
                                         name={CONT.form.phone.name} 
                                         placeholder={`${CONT.form.phone.label} ${CONT.form.phone.required ? "- (Required)" : ""}`} 
-                                        required={CONT.form.phone.required} />
+                                        required={CONT.form.phone.required}
+                                        onInput={this.keyin}
+                                        ref="phone" />
                                 </div>
 
                                 <div className={global.formrow}>
@@ -122,17 +203,28 @@ export default class Contact extends Component {
                                         className={`${global.input} ${styles.input}`} 
                                         name={CONT.form.email.name} 
                                         placeholder={`${CONT.form.email.label} ${CONT.form.email.required ? "- (Required)" : ""}`} 
-                                        required={CONT.form.email.required} />
+                                        required={CONT.form.email.required}
+                                        onInput={this.keyin}
+                                        ref="email" />
                                 </div>
 
                                 <div className={global.formrow}>
-                                    <input 
-                                        minLength="3" 
-                                        type={CONT.form.subject.type} 
-                                        className={`${global.input} ${styles.input}`} 
-                                        name={CONT.form.subject.name} 
-                                        placeholder={`${CONT.form.subject.label} ${CONT.form.subject.required ? "- (Required)" : ""}`} 
-                                        required={CONT.form.subject.required} />
+                                    <select 
+                                        className={`${global.select} ${styles.select}`}
+                                        name={CONT.form.subject.name}
+                                        required={CONT.form.subject.required}
+                                        onChange={this.keyin}
+                                        ref="subject"
+                                        defaultValue>
+                                        <option disabled value>{CONT.form.subject.label} {CONT.form.subject.required ? "- (Required)" : ""}</option>
+                                        {
+                                            CONT.form.subject.options.map((option,i)=>{
+                                                return(
+                                                    <option key={`option_${i}`} value={option.value}>{option.label}</option>
+                                                )
+                                            })
+                                        }
+                                    </select>
                                 </div>
 
                                 <div className={global.formrow}>
@@ -145,12 +237,17 @@ export default class Contact extends Component {
                                         placeholder={`${CONT.form.description.label} ${CONT.form.description.required ? "- (Required)" : ""}`} 
                                         required={CONT.form.description.required}
                                         onKeyDown={this.keydown} 
-                                        onChange={this.keydown} />
+                                        onInput={this.keydown}
+                                        ref="description" />
                                     <div id="wordcount" className={styles.workcount} textnum={this.state.textcount}></div>
                                 </div>
                                 <div className={`${global.formrow} ${styles.flex}`}>
                                     <button type="submit" className={`${global.button} ${styles.button}`}>{CONT.form.submit}</button>
-                                    <button type="reset" className={`${global.button} ${global.ghostlybutton} ${styles.button}`}>{CONT.form.clear}</button>
+                                    <button 
+                                        type="reset" 
+                                        className={`${global.button} ${global.ghostlybutton} ${styles.button}`}
+                                        onClick={this.resethandler}
+                                        >{CONT.form.clear}</button>
                                 </div>
                             </form>
                         </div>

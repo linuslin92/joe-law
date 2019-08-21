@@ -4,7 +4,8 @@
 }
 
 .input,
-.textarea {
+.textarea,
+.select {
     background-color: rgba(225, 225, 220, .7);
 }
 
@@ -30,7 +31,7 @@
     }
 }
 .workcount {
-    top: -2rem;
+    top: -2.2rem;
     text-align: right;
     position: relative;
     padding-right: .5rem;
