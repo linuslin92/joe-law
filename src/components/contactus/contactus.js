@@ -60,6 +60,7 @@ export default class Contact extends Component {
     formsubmit = (e) => {
         e.preventDefault();
         let data = this.state.formdata;
+        const $status = document.querySelector('#status');
         this.disableall();
         fetch('/cgi-bin/contactus.php', {
             method: "POST",
@@ -78,6 +79,7 @@ export default class Contact extends Component {
                     message: e.message
                 }
             this.setState({status: formstate});
+            $status.scrollIntoView({ behavior: "smooth" });
             setTimeout(() => {
                 this.setState({
                     status: {
@@ -95,6 +97,7 @@ export default class Contact extends Component {
                 message: "Something went wrong, try again later!"
             }
             this.setState({status: formstate});
+            $status.scrollIntoView({ behavior: "smooth" });
             setTimeout(()=>{
                 this.setState({
                     status: {
@@ -170,6 +173,7 @@ export default class Contact extends Component {
                             </div>
                         </div>
                         <div className={`${layout.flex6} ${layout.contentcard}`}>
+                            <Status data={this.state.status} />
                             <label htmlFor="contact" className={global.label}>{CONT.form.label}</label>
                             <form className={global.form} onReset={this.keydown} onSubmit={this.formsubmit} method="POST">
                                 <div className={global.formrow}>
@@ -252,7 +256,6 @@ export default class Contact extends Component {
                             </form>
                         </div>
                     </div>
-                    <Status data={this.state.status} />
                 </div>
             </Fragment>
         )
