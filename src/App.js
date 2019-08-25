@@ -29,11 +29,11 @@ const images = require.context('./src/img', true);
 function App() {
   return (
     <div className="App">
-        <Seo />
         <LanguageProvider>
           <LanguageContext.Consumer>
             {content=>(
               <Router>
+                <Seo content={content.pack.meta} />
                 <Helmet htmlAttributes={{ lang: content.pack.lang }} />
                 <Navbar content={content.pack.navbar} />
                 <div>

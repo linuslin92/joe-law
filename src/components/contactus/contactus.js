@@ -158,7 +158,7 @@ export default class Contact extends Component {
                             </div>
                             <div className={global.formrow}>
                                 <label className={global.label}>{CONT.email.label}</label>
-                                <div className={global.formtext}><a className={global.link} href={`mailto:{CONT.email.text}`} target="_blank" rel="noopener noreferrer">{CONT.email.text}</a></div>
+                                <div className={global.formtext}><a className={global.link} href={`mailto:${CONT.email.text}`} target="_blank" rel="noopener noreferrer">{CONT.email.text}</a></div>
                             </div>
                             <div className={global.formrow}>
                                 <label className={global.label}>{CONT.hours.label}</label>
