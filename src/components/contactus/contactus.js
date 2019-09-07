@@ -44,9 +44,9 @@ export default class Contact extends Component {
         let state = this.state.formdata;
         let keys = Object.keys(state);
         let form = document.querySelector('form');
-        console.log(keys, form);
         keys.map((k) => {
             form[k].disabled = true;
+            return true;
         });
     }
     enableall = () => {
@@ -55,6 +55,7 @@ export default class Contact extends Component {
         let form = document.querySelector('form');
         keys.map((k) => {
             form[k].disabled = false;
+            return true;
         })
     }
     formsubmit = (e) => {
@@ -141,26 +142,30 @@ export default class Contact extends Component {
                 <Hero src={ this.props.bgImg } srcmin={ this.props.bgImgMin } />
                 <div className={global.paddingcontainer}>
                     <div className={layout.flexbox}>
-                        <div className={`${layout.flex6} ${layout.contentcard}`}>
-                            <div className={global.formrow}>
+                        <div className={`${layout.flex6} ${layout.contentcard} ${styles.contacttiles}`}>
+                            <div className={`${global.formrow}`}>
                                 <label className={global.label}>{CONT.address1.label}</label>
                                 <div className={global.formtext}>{CONT.address1.text}</div>
                                 {addr2.length ? <div className={global.formtext}>{addr2}</div>: ''}
                                 <div className={global.formtext}>{CONT.city.text}, {CONT.state.text} {CONT.zipcode.text}</div>
                             </div>
-                            <div className={global.formrow}>
+                            <div className={`${global.formrow}`}>
                                 <label className={global.label}>{CONT.phone.label}</label>
                                 <div className={global.formtext}><a className={global.link} href={`tel:+1${CONT.phone.text}`}>{CONT.phone.text}</a></div>
                             </div>
-                            <div className={global.formrow}>
+                            <div className={`${global.formrow}`}>
                                 <label className={global.label}>{CONT.fax.label}</label>
                                 <div className={global.formtext}>{CONT.fax.text}</div>
                             </div>
-                            <div className={global.formrow}>
+                            <div className={`${global.formrow}`}>
                                 <label className={global.label}>{CONT.email.label}</label>
-                                <div className={global.formtext}><a className={global.link} href={`mailto:${CONT.email.text}`} target="_blank" rel="noopener noreferrer">{CONT.email.text}</a></div>
+                                <div className={global.formtext}>
+                                    <a className={`${global.link} ${styles.breakword}`} href={`mailto:${CONT.email.text}`} target="_blank" rel="noopener noreferrer">
+                                    {CONT.email.text}
+                                    </a>
+                                </div>
                             </div>
-                            <div className={global.formrow}>
+                            <div className={`${global.formrow}`}>
                                 <label className={global.label}>{CONT.hours.label}</label>
                                 {
                                     CONT.hours.text.map((hr, i)=>(
@@ -172,7 +177,7 @@ export default class Contact extends Component {
                                 }
                             </div>
                         </div>
-                        <div className={`${layout.flex6} ${layout.contentcard}`}>
+                        <div className={`${layout.flex6} ${layout.contentcard} ${styles.contacttiles}`}>
                             <Status data={this.state.status} />
                             <label htmlFor="contact" className={global.label}>{CONT.form.label}</label>
                             <form className={global.form} onReset={this.keydown} onSubmit={this.formsubmit} method="POST">
@@ -220,7 +225,7 @@ export default class Contact extends Component {
                                         onChange={this.keyin}
                                         ref="subject"
                                         defaultValue>
-                                        <option disabled value>{CONT.form.subject.label} {CONT.form.subject.required ? "- (Required)" : ""}</option>
+                                        <option disabled value hidden>{CONT.form.subject.label} {CONT.form.subject.required ? "- (Required)" : ""}</option>
                                         {
                                             CONT.form.subject.options.map((option,i)=>{
                                                 return(

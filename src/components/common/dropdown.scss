@@ -5,6 +5,7 @@ $selectBackgroundColor: #d2d2d2;
 $optionHoverColor: #aaa;
 
 .dropdown {
+    font-family: "Alegreya, serif";
     width: 7rem;
     height: auto;
     display: flex;
@@ -16,6 +17,7 @@ $optionHoverColor: #aaa;
         padding: .1rem .8rem .1rem;
         color: $selectColor;
         flex: 0 0 2.4rem;
+        font-family: "Alegreya, serif";
         font-size: $textsmall;
         border: thin solid transparent;
         cursor: pointer;

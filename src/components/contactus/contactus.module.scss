@@ -1,4 +1,5 @@
 @import '../../src/styles/variables.scss';
+@import '../../src/styles/theme.scss.module.scss';
 .display-card {
     background-color: $gray;
 }
@@ -6,7 +7,8 @@
 .input,
 .textarea,
 .select {
-    background-color: rgba(225, 225, 220, .7);
+    background-color: $cbackground;
+    font-family: "Alegreya, serif";
 }
 
 .flex {
@@ -16,7 +18,14 @@
         flex-wrap: wrap;
     }
 }
+.contacttiles {
+    width: 100%;
+}
+.breakword {
+    word-break: break-all;
+}
 .button {
+    font-family: "Alegreya, serif";
     @media (max-width: 767px) {
         flex: 1 100%;
         &:not(:first-child) {
@@ -28,6 +37,9 @@
         &:not(:first-child) {
             margin-left: 1.5rem;
         }
+    }
+    &:hover {
+        box-shadow: 0 1px 3px 0 $darkgray;
     }
 }
 .workcount {
