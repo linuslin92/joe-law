@@ -65,7 +65,10 @@
 .inlinetext,
 .listitem,
 .description,
-.formtext,
+.formtext{
+    font-size: $textregular;
+    line-height: $lineregular;
+}
 .input,
 .input::placeholder,
 .select,
@@ -73,7 +76,7 @@
 .textarea::placeholder,
 .button {
     font-size: $textregular;
-    line-height: $lineregular;
+    line-height: $lineinput
 }
 .label {
     font-size: $textemphasis;
