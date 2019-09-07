@@ -53,6 +53,42 @@ class Navbar extends Component {
         let LOGO = this.state.content.logo;
         let MENU = CONT.menu;
         let logo = getImage(LOGO.src);
+
+        let svgTri = (
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 7.9374998 7.9375002">
+                <rect
+                style={{opacity:1,fillOpacity:1,stroke:"none",strokeWidth:0,strokeLinecap:"round",strokeLinejoin:"round",strokeMiterlimit:4,strokeDasharray:"none",strokeOpacity:1}}
+                id="rect3717"
+                width="5.2916665"
+                height="0.5"
+                x="1.3229166"
+                y="1.12082"
+                rx="0.012874651"
+                ry="0.009044745" />
+                <rect
+                style={{opacity:1,fillOpacity:1,stroke:"none",strokeWidth:0,strokeLinecap:"round",strokeLinejoin:"round",strokeMiterlimit:4,strokeDasharray:"none",strokeOpacity:1}}
+                id="rect3719"
+                width="5.2916665"
+                height="0.5"
+                x="1.3229166"
+                y="3.44916"
+                rx="0.012874651"
+                ry="0.009044745" />
+                <rect
+                style={{opacity:1,fillOpacity:1,stroke:"none",strokeWidth:0,strokeLinecap:"round",strokeLinejoin:"round",strokeMiterlimit:4,strokeDasharray:"none",strokeOpacity:1}}
+                id="rect3721"
+                width="5.2916665"
+                height="0.5"
+                x="1.3229166"
+                y="5.7775"
+                rx="0.012874651"
+                ry="0.009044745" />
+            </svg>
+        );
         
         return (
             <header>
@@ -64,7 +100,8 @@ class Navbar extends Component {
                     </div>
                     <div className="menu">
                         <button className="hamburger" onClick={(e)=>e.target.classList.toggle('active')}>
-                            <div className="tribar">&equiv;</div>
+                            {/* <div className="tribar">&equiv;</div> */}
+                            {svgTri}
                         </button>
                         <ul>
                             {
