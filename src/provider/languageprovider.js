@@ -13,7 +13,8 @@ let PACK = {
 export default class LanguageProvider extends Component {
     state = {
         pack: PACK[lang],
-        switch: (str) => {
+        switch: (e) => {
+            let str = e.currentTarget.value;
             this.setState({
                 pack: PACK[str]
             })

@@ -28,6 +28,7 @@ export default class Practice extends Component {
             image: image('./' + page + '.jpg'),
             image_min: image('./' + page + '_low.jpg'),
         });
+        window.scrollTo(0, 0);
     }
     render() {
         let CONT = this.state.content;

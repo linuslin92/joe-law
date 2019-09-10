@@ -1,0 +1,58 @@
+.toggle {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	color: inherit;
+	cursor: pointer;
+	input {
+		height: inherit;
+		width: inherit;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 0;
+		&:checked {
+			z-index: 0;
+			display: none;
+			+ label {
+				display: block;
+			}
+		}
+		&:not(:checked) {
+			z-index: 1;
+			opacity: .01;
+			+ label {
+				display: none;
+			}
+		}
+	}
+	label {
+		display: inline-block;
+		margin: 0 auto;
+		line-height: 100%;
+		text-align: center;
+		font-size: 1.4rem;
+		align-self: center;
+	}
+	.options {
+		display: inline-flex;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: inherit;
+		height: inherit;
+	}
+	&:before {
+		content: '';
+		display: block;
+		position: relative;
+		border-radius: 50%;
+		background-color: rgba(255, 255, 255, .2);
+		width: 3rem;
+		height: 3rem;
+		transform: translate3d(-50%, -50%, 0);
+		left: 50%;
+		top: 50%;
+	}
+}

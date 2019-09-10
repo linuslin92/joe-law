@@ -2,45 +2,22 @@ import React, { Component } from 'react';
 import { NavLink as Link} from 'react-router-dom';
 
 import config from '../../config/env_conf';
-import Dropdown from './dropdown';
+import Toggle from './toggle';
+
+import LanguageContext from '../../context/languagecontext';
 
 import './navbar.scss';
 import global from '../../src/styles/global.module.scss';
 import getImage from '../../service/getImage';
 
+const isEs = config.USER_LANGUAGE.search(/es/i) > -1;
+
 class Navbar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            lang: 'en',
             content: this.props.content
         }
-    }
-    menuOptions = {
-        default: {
-            id: config.USER_LANGUAGE.search(/es/i) > -1 ? '2' : '1'
-        },
-        options: [
-            {
-                id: '1',
-                label: 'English',
-                value: 'en'
-            }, 
-            {
-                id: '2',
-                label: 'Español',
-                value: 'es'
-            }
-        ]
-    };
-
-    selectLanguage = (str) => {
-        this.setState({
-            lang: {
-                id: str,
-                pack: {}
-            }
-        });
     }
 
     render() {
@@ -48,11 +25,28 @@ class Navbar extends Component {
             let $menu = e.target.parentNode.parentNode.parentNode;
             let $btn = $menu.childNodes.values().next().value;
             $btn.classList.toggle('active');
+            window.scrollTo(0, 0);
         }
         let CONT = this.props.content;
         let LOGO = this.state.content.logo;
         let MENU = CONT.menu;
         let logo = getImage(LOGO.src);
+
+        const toggleOptions = {
+            name: "lang",
+            option1: {
+                value: "en",
+                title: 'English',
+                displayName: "ES",
+                checked: !isEs,
+            },
+            option2: {
+                value: "es",
+                title: 'Español',
+                displayName: "EN",
+                checked: isEs
+            }
+        }
 
         let svgTri = (
             <svg
@@ -100,7 +94,6 @@ class Navbar extends Component {
                     </div>
                     <div className="menu">
                         <button className="hamburger" onClick={(e)=>e.target.classList.toggle('active')}>
-                            {/* <div className="tribar">&equiv;</div> */}
                             {svgTri}
                         </button>
                         <ul>
@@ -115,7 +108,13 @@ class Navbar extends Component {
                             }
                         </ul>
                     </div>
-                    <Dropdown data={ this.menuOptions } handler={ this.eventHandler } callback={ this.selectLanguage } />
+                    <div className="langtoggle">
+                        <LanguageContext.Consumer>
+                            {lang => 
+                                <Toggle data={{...toggleOptions, callback: lang.switch}} />
+                            }
+                        </LanguageContext.Consumer>
+                    </div>
                 </div>
             </header>
         )

@@ -4,6 +4,8 @@ header {
     background-color: $blue;
     position: fixed;
     z-index: 1060;
+    color: $white;
+    font-family: inherit;
     > div {
         font-size: $textregular;
         display: flex;
@@ -46,23 +48,9 @@ header {
                 }
             }
         }
-        .dropdown {
-            box-sizing: border-box;
-            padding: 1.5rem 1rem;
-            align-self: center;
-            flex: 0 95px;
-            max-width: 95px;
-            .dropdownSelect {
-                background-color: transparent;
-                color: #eee;
-                text-decoration: underline;
-                line-height: 1.3;
-                &.open {
-                    background-color: white;
-                    color: #2d2d2d;
-                    text-decoration: none;
-                }
-            }
+        .langtoggle {
+            width: 5rem;
+            flex: 0 5rem;
         }
         .tribar {
             font-size: 3rem;
@@ -108,8 +96,7 @@ header {
     }
 }
 .logo a,
-.hamburger,
-.dropdown input {
+.hamburger {
     &:focus {
         outline: thin dashed $white;
         outline-offset: -4px;
@@ -135,9 +122,6 @@ header {
         }
         + div {
             margin-top: $headerHeight;
-        }
-        .dropdown {
-            height: $headerHeight;
         }
         .logo {
             line-height: $headerHeight - .5rem;
