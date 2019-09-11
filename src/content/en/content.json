@@ -347,6 +347,16 @@
             "clear": "Clear"
         }
     },
+    "contenteditor": {
+        "title": "Content Editor",
+        "meta": {
+            "description": ""
+        },
+        "hero": {
+            "high": "./si_se_puede_high.png",
+            "low": "./si_se_puede_low.png"
+        }
+    },
     "footer": {
         "copyright": {
             "text": "&copy; 2019 Copyright - All Rights Reserved."

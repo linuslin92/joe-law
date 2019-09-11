@@ -22,6 +22,7 @@ import Seo from './components/common/seo';
 /* Content Provider */
 import LanguageContext from './context/languagecontext';
 import LanguageProvider from './provider/languageprovider';
+import ContentEditor from './components/contenteditor/contenteditor';
 
 /* Image Context */
 const images = require.context('./src/img', true);
@@ -74,6 +75,16 @@ function App() {
                         />
                       </Container>)} 
                     />
+                    <Route path="/contenteditor" component={() => (
+                      <Container>
+                        <ContentEditor
+                          content={{...content.pack}}
+                          bgImg={images(content.pack.contenteditor.hero.high)}
+                          bgImgMin={images(content.pack.contenteditor.hero.low)}
+                        />
+                      </Container>
+                    )}
+                    /> 
                     <Route path="/" exact component={()=>(<Redirect to="/home"></Redirect>)} />
                     <Route component={()=>(
                       <Container>

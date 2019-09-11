@@ -1,0 +1,18 @@
+@import '../../../src/src/styles/variables.scss';
+.maincontent {
+	background-color: $lightgray;
+}
+
+.flexbox {
+	display: flex;
+	width: 100%;
+	border: thin solid #ccc;
+	border-radius: 5px;
+}
+
+.flexcolumn {
+	flex: 1 1 auto;
+	&:not(:first-child) {
+		border-left: thin solid $darkgray;
+	}
+}
