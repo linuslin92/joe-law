@@ -22,6 +22,12 @@ export default class ContentEditor extends Component {
 		console.log('#$!!R', e);
 	}
 
+	showsubmenu (e) {
+		e.stopPropagation();
+		const tar = e.target.parentNode;
+		tar.classList.toggle(styles.expanded);
+	}
+
 	createtree(obj) {
 		const keys = Object.keys(obj);
 		let list;
@@ -31,9 +37,15 @@ export default class ContentEditor extends Component {
 				list = (
 					<Fragment>
 						{list}
-						<ul>
-							{this.createtree(item)}
-						</ul>
+						<li 
+							className={`${styles.expanded} ${styles.hasSubMenu}`}
+							onClick={this.showsubmenu}
+						>
+							<label>{key}</label>
+							<ul>
+								{this.createtree(item)}
+							</ul>
+						</li>
 					</Fragment>
 				)
 			} else {
@@ -50,7 +62,7 @@ export default class ContentEditor extends Component {
 					list = (
 						<Fragment>
 							{list}
-							<li>
+							<li className={styles.aligntop}>
 								<label>{key}: </label><textarea type="text" value={item} />
 							</li>
 						</Fragment>
@@ -80,7 +92,7 @@ export default class ContentEditor extends Component {
 					<h2 className={`${global.heading2} ${global.textcent} ${global.textshadow6}`}>{CONT.contenteditor.title}</h2>
 					<div className={styles.maincontent}>
 						<div className={styles.flexbox}>
-							<ul className={styles.flexcolumn}>
+							<ul className={styles.tree}>
 							{
 								submenu
 							}
