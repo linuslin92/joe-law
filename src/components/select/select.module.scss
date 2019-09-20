@@ -1,0 +1,26 @@
+@import '../../src/styles/variables.scss';
+.moduleSelector {
+	width: 100%;
+	background: $lightergray;
+	height: 10rem;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 3.2rem;
+	padding-bottom: 3.2rem;
+}
+.selectorLabel {
+	font-size: 1.5rem;
+	height: 3.2rem;
+	line-height: 3.6rem;
+	margin-right: 2.4rem;
+	text-transform: uppercase;
+}
+.moduleSelect {
+	font-size: 1.5rem;
+	height: 3.2rem;
+	padding: .6rem 2rem;
+	min-width: 16rem;
+	background-color: $darkerwhite;
+}
