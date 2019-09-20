@@ -6,7 +6,9 @@
 
 .input,
 .textarea,
-.select {
+.select,
+.option,
+.select:invalid {
     background-color: $cbackground;
     font-family: "Alegreya, serif";
 }
@@ -53,4 +55,13 @@
         font-style: italic;
         color: $darkgray;
     }
+}
+.select:invalid {
+    font-family: "Alegreya, serif";
+}
+.ctaLabel {
+    margin-bottom: 1.6rem;
+    display: block;
+    color: $red !important;
+    font-weight: 600;
 }

@@ -31,22 +31,22 @@
         ]
     },
     "home": {
-        "title": "Más de 30 Años Con Experienciat",
+        "title": "Más de 40 Años Con Experiencia",
         "meta": {
-            "description": "Más de 30 Años Con Experiencia, Oficina del Licenciado José A. Stewart"
+            "description": "Más de 40 Años Con Experiencia, Oficina del Licenciado José A. Stewart"
         },
         "hero": {
             "high": "./mallet_high.jpg",
             "low": "./mallet_low.jpg"
         },
         "intro": {
-            "heading": "Más de 30 años con experiencia",
+            "heading": "Más de 40 años con experiencia",
             "quotation": "Cuando se trata de justiciá, yo busco una estrategia legal y lo sigo hasta el final.",
             "author": "José A. Stewart"
         }
     },
     "practice": {
-        "title": "Defensa Criminal | Inmigración | Lesiones a la Persona | Derechos de Familia",
+        "title": "Defensa Criminal | Inmigración | Lesiones a la Persona | Derecho de Familia",
         "meta": {
             "description": ""
         },
@@ -61,14 +61,14 @@
                 "meta": {
                     "description": ""
                 },
-                "summary": "Los crímenes generalmente se clasifican como delitos menores o delitos graves. Un delito grave se castiga con la muerte o con carcel por más de un año. Un delito menor es la falta de conducta que la ley prescribe el castigo de no más de un año de prisión. Los procedimientos penales estan diseñados para hacer cumplir los derechos constitucionales de sospechosos y acusados criminales, empezando con el contacto de policia inciál y continuando con el aresto, investigaciíon, juicio, sentencia, y apelaciones.",
+                "summary": "Los crímenes generalmente se clasifican como delitos menores o delitos graves. Un delito grave se castiga con la pena de 2 años de prisión o prisión por vida. Un delito menor es la falta de conducta en la cual la ley prescribe el castigo de no más de un año de prisión. Los procedimientos penales están diseñados para hacer cumplir los derechos constitucionales de sospechosos y acusados criminales. El proceso inicia con el contacto de policía y continuando con el arresto, investigación, juicio, sentencia, y por ultimo las apelaciones.",
                 "bullet_points": [
                     {
                         "id": "criminal_law_1",
                         "list": [
                             "Crimenes de drogas",
                             "Casos de fraude",
-                            "Ofensa de posesion de armas",
+                            "Ofensa de posesión de armas",
                             "Crimen de violencia (violencia domestica)",
                             "Delito sexual",
                             "Ofensa de conducir bajo la influencia del alcohol",
@@ -83,7 +83,7 @@
                 "meta": {
                     "description": ""
                 },
-                "summary": "En tiempos como estos, es importante ayudar a familias a quedarse unidos. De hecho, José A. Stewart puede ayudarle a cambiar su estado migratorio para que usted siga ofreciendo a su familia una vida mejor sin preocuparse en correr el riesgo de ser deportado. El esta registrado con las Asociaciones de Abogados de Inmigraciòn, cual buscan justicia para inmigrantes que enfrentan en ser deportados.",
+                "summary": "En tiempos como estos, es muy importante ayudar a las familias a quedarse unidas. José A. Stewart puede ayudarle a cambiar su estado migratorio para que usted pueda seguir ofreciéndole a su familia una vida mejor, sin preocuparse en correr el riesgo de ser deportado. Él está registrado con las Asociaciones de Abogados de Inmigración, las cuales buscan justicia para inmigrantes que enfrentan ser deportados.",
                 "bullet_points": [
                     {
                         "id": "immigration_law_1",
@@ -91,7 +91,7 @@
                         "list": [
                             "Comprometidos y padres de ciudadanos estadounidenses",
                             "Parejas e hijos de ciudadanos/residentes de los EE. UU",
-                            "Cancelacion de condiciones de residencia",
+                            "Cancelación de condiciones de residencia",
                             "Reunificación de familias",
                             "Exenciones por inadmisibilidad",
                             "Naturalización"
@@ -103,7 +103,7 @@
                         "list": [
                             "Asilo",
                             "Deportación",
-                            "Apelaciones a cortes Federales",
+                            "Apelaciones en cortes Federales",
                             "Exenciones por motivos de inadmisibilidad"
                         ]
                     }
@@ -114,33 +114,33 @@
                 "meta": {
                     "description": ""
                 },
-                "summary": "Lesiones a la persona es la área de la ley que cubre accidentes y lesiones que le causan daño físico o daño emocional. José A. Stewart puede ayudale a obtener la compensación que se merece lo han herido, y cree que las acciones de otra perona le llevaron a ser lastimado. Las faturas médicas pueden estar acumulándose. y puede estar perdiendo tiempo de trabajo. Las lesiones a la persona generalmente se asocian con daños corporales, pero puede incluir dolor y sufrimento o traumá emocional.",
+                "summary": "Lesiones a la persona es el área del Derecho donde la ley cubre accidentes y lesiones que le causan daño físico o daño emocional a la persona. Las lesiones a la persona generalmente se asocian con daños corporales, pero puede incluir dolor y sufrimiento o trauma emocional. Esto le puede afectar de manera grave en sus finanzas con la acumulación de facturas médicas durante el tiempo lesionado sin poder trabajar. José A. Stewart puede ayudarle a obtener la compensación que se merece.",
                 "bullet_points": [
                     {
                         "id": "personal_injury_1",
                         "list": [
                             "Accidentes automovilístico",
-                            "Accidentes de camión",
+                            "Accidentes de camion",
                             "Accidentes relacionados con el alcohol"
                         ]
                     }
                 ]
             },
             "family_law": {
-                "title": "Derechos de Familia",
+                "title": "Derecho de Familia",
                 "meta": {
                     "description": ""
                 },
-                "summary": "La disolución de matrimonió involucran las responsabilidades financieras, los derechos de custodia, y demás obligaciones de una familia que pertenecen a la categoría de derecho de familia. José A. Stewart tiene experiencia con casos de divorció y puede asegurarse de que sus derechos e intereses estén protegidos",
+                "summary": "La disolución del matrimonió involucra las responsabilidades financieras, los derechos de custodia, y demás obligaciones que pertenecen a la categoría de derecho de familia. José A. Stewart tiene amplia experiencia con casos de divorció y puede asegurarse de que sus derechos e intereses estén protegidos",
                 "bullet_points": [
                     {
                         "id": "family_law_1",
                         "list": [
-                            "Divorció",
+                            "Divorcio",
                             "Manutención de los hijos",
-                            "Custadiá de menores",
+                            "Custodia de menores",
                             "Procedimientos de ofensa familiar",
-                            "Testamento testamentaria"
+                            "Testamento testamentario"
                         ]
                     }
                 ]
@@ -223,7 +223,7 @@
         }
     },
     "bio": {
-        "title": "José A. Stewart",
+        "title": "Biografia",
         "meta": {
             "description": ""
         },
@@ -232,16 +232,16 @@
             "low": "./joselaw_low.jpg"
         },
         "content": [
-            "Mi nombre es José A. Stewart, y durante más de 30 años, mi oficina ha ayudado a Tejanos de todos los caminos de la vida a buscar justiciá e igualdad.",
-            "Mi bufete no sigue el mismo camino de las firmas grandes, por una rason. Yo les ofresco a mis clientes atención de uno a uno para obener un entendimiento mas profundo de su caso. De esté modo puedo crear una relación duradera con mis clientes.",
-            "Mi plan es facilitar la comunicación con el cliente cúal es un componente esencial para alcansar mi objetivó extosamente.",
-            "Mi oficina se dedica en ofrecer aquellos que buscan mi asistencia legal, una estrategia para lograr resultados. Es importante para mi como su representate estar al tanto de todo."
+            "Mi nombre es José A. Stewart, y durante más de 40 años, mi oficina ha ayudado a Tejanos de todos los caminos de la vida a buscar justicia e igualdad.",
+            "Mi bufete no sigue el mismo camino de las firmas grandes, por esta razón, Yo les ofrezco a mis clientes atenciones personalizadas para obtener un entendimiento más profundo de su caso, de este modo puedo crear una relación duradera con mis clientes.",
+            "Mi plan es facilitar la comunicación con el cliente, el cual es un componente esencial para alcanzar mi objetivó exitosamente al momento de representarlo en la corte.",
+            "Para aquellos que buscan mi asistencia legal, mi oficina se dedica a ofrecer un excelente servicio al cliente, manteniéndolo al tanto de todos los detalles de su caso  y orientaciones que necesite."
         ]
     },
     "contactus": {
-        "title": "Consultá Gratis",
+        "title": "Consulata Gratis",
         "meta": {
-            "description": "Consultá Gratis | (972)422-8165 | Oficina del Licenciado José A. Stewart"
+            "description": "Consulata Gratis | (972)422-8165 | Oficina del Licenciado José A. Stewart"
         },
         "hero": {
             "high": "./handshake_high.jpg",
@@ -292,29 +292,33 @@
             ]
         },
         "form": {
-            "label": "Consultá Gratis",
+            "label": "Consulata Gratis",
             "name": {
                 "label": "Nombre",
                 "name": "name",
                 "required": "required",
+                "required_text": "Obligatorio",
                 "type": "text"
             },
             "phone": {
                 "label": "Telefono",
                 "name": "phone",
                 "required": "required",
+                "required_text": "Obligatorio",
                 "type": "tel"
             },
             "email": {
                 "label": "Email",
                 "name": "email",
                 "required": "",
+                "required_text": "Obligatorio",
                 "type": "email"
             },
             "subject": {
-                "label": "Subject",
+                "label": "Asunto",
                 "name": "subject",
                 "required": "required",
+                "required_text": "Obligatorio",
                 "options": [
                     {
                         "value": "Criminal Defense",
@@ -335,13 +339,14 @@
                 ]
             },
             "description": {
-                "label": "Enter brief description",
+                "label": "Escriba un breve mensaje",
                 "name": "description",
                 "maxLength": "400",
-                "required": "required"
+                "required": "required",
+                "required_text": "Obligatorio"
             },
-            "submit": "Submit",
-            "clear": "Clear"
+            "submit": "Enviar",
+            "clear": "Descartar"
         }
     },
     "contenteditor": {

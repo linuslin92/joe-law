@@ -31,9 +31,9 @@
         ]
     },
     "home": {
-        "title": "Over 30 Years of Experience",
+        "title": "Over 40 Years of Experience",
         "meta": {
-            "description": "José A. Stewart attorney has over 30 years of experience dedicated to provide exceptional legal consulting services.",
+            "description": "José A. Stewart attorney has over 40 years of experience dedicated to provide exceptional legal consulting services.",
             "tags":""
         },
         "hero": {
@@ -41,8 +41,8 @@
             "low": "./mallet_low.jpg"
         },
         "intro": {
-            "heading": "Over 30 Years of Experience",
-            "quotation": "When it comes to justice, I create a legal strategy an follow it to the end.",
+            "heading": "Over 40 Years of Experience",
+            "quotation": "When it comes to justice, I create a legal strategy and follow it to the end.",
             "author": "José A. Stewart"
         }
     },
@@ -62,7 +62,7 @@
                 "meta": {
                     "description": ""
                 },
-                "summary": "Crimes are usually categorized as misdemeanors or felonies. A felony is a serious misconduct that is punishable by death or by imprisonment for more than one year. A misdemeanor is misconduct which the law prescribes punishment of no more than one year in prison. Criminal procedures are designed to enforce the constitutional rights of criminal suspects and defendants, starting with initial police contact and continuing through arrest, investigation, trial, sentencing, and appeals.",
+                "summary": "Crimes are usually categorized as misdemeanors or felonies. A felony is a serious misconduct that is punishable by imprisonment ranging from 2 years to life. A misdemeanor is misconduct wherein the law prescribes punishment of no more than one year in jail. Criminal procedures are designed to enforce the constitutional rights of suspects and defendants. The process commences with the initial police contact and continues through arrest, investigation, trial, sentencing, and appeals.",
                 "bullet_points": [
                     {
                         "id": "criminal_law_1",
@@ -85,7 +85,7 @@
                 "meta": {
                     "description": ""
                 },
-                "summary": "In times like these, it's important to help keep families together. However, José A. Stewart can help you change your immigration status to provide a better life for your family without having to worry about one day being separated. He is registered with the American Immigration Lawyers Association, which seeks justice for immigrants facing deportation.",
+                "summary": "In times like these, it's important to help keep families together. José A. Stewart can help you change your immigration status to provide a better life for your family. He is registered with the American Immigration Lawyers Association, which seeks justice for immigrants facing deportation.",
                 "bullet_points": [
                     {
                         "id": "immigration_law_1",
@@ -112,11 +112,11 @@
                 ]
             },
             "personal_injury": {
-                "title": "Personal Injury",
+                "title": "Personal Injury Law",
                 "meta": {
                     "description": ""
                 },
-                "summary": "Personal injury is the area of law that covers accidents and injuries that cause you physical or emotional harm. José A. Stewart can help you get the compensation you need if you've been hurt, and you believe that someone else's wrongful actions led to you being hurt. Medical bills maybe accumulating, and you may be missing work time. Personal injury is usually associated with bodily harm, but can include pain and suffering or emotional trauma.",
+                "summary": "Personal injury is the area of law that covers accidents and injuries that cause you physical harm or emotional trauma. If your medical bills are accumulating and you’re taking time off work, it’s important to ensure you receive fair compensation. José A. Stewart can help you get the compensation you need if you've been hurt by someone else's wrongful actions.",
                 "bullet_points": [
                     {
                         "id": "personal_injury_1",
@@ -134,7 +134,7 @@
                 "meta": {
                     "description": ""
                 },
-                "summary": "The dissolution of marriage involve financial responsibility rights of custody, and the obligation of a family has that belongs in the category of family law. José A. Stewart has experience with divorce cases and helping them be less difficult than what is already is. He can make sure that your rights and interests are protected.",
+                "summary": "The dissolution of marriage involves custody, child support, medical support and the division of property. José A. Stewart has years of experience handling divorce cases and can help you through the difficult process. He can make sure that your rights and interests are protected.",
                 "bullet_points": [
                     {
                         "id": "family_law_1",
@@ -235,10 +235,9 @@
             "low": "./joselaw_low.jpg"
         },
         "content": [
-            "My name is José A. Stewart, and for over 30 years, my law office has helped Texans from all walks of life seek justice and equality.",
-            "My law office does not follow the big law firm business ideal, for a reason. I provide my clients with one on one attention, in order to develop a deeper understanding of their case. This way I can create a relationship with my clients that lasts a lifetime.",
-            "My plan is to be more accessible so that I can facilitate client communication which is an essential component in successfully reaching the objective.",
-            "My law office is committed to providing those who seek my legal assistance, a firm and attentive legal strategy that achieves results. It's important to me as your representative that I stay on top of the objective."
+            "My name is José A. Stewart, and for over 40 years, my law office has helped Texans from all walks of life seek justice and equality.",
+            "My law office does not follow the big law firm business idea. I provide my clients with one on one attention in order to develop a deeper understanding of their case. This way I can create a relationship with my clients that lasts a lifetime.",
+            "My plan is to be more accessible so that I can facilitate client communication which is an essential component in successfully handling your case."
         ]
     },
     "contactus": {
@@ -300,24 +299,28 @@
                 "label": "Name",
                 "name": "name",
                 "required": "required",
+                "required_text": "Required",
                 "type": "text"
             },
             "phone": {
                 "label": "Phone",
                 "name": "phone",
                 "required": "required",
+                "required_text": "Required",
                 "type": "tel"
             },
             "email": {
                 "label": "Email",
                 "name": "email",
                 "required": "",
+                "required_text": "Required",
                 "type": "email"
             },
             "subject": {
                 "label": "Subject",
                 "name": "subject",
                 "required": "required",
+                "required_text": "Required",
                 "options": [
                     {
                         "value": "Criminal Defense",
@@ -341,7 +344,8 @@
                 "label": "Enter brief description",
                 "name": "description",
                 "maxLength": "400",
-                "required": "required"
+                "required": "required",
+                "required_text": "Required"
             },
             "submit": "Submit",
             "clear": "Clear"

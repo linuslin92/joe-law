@@ -67,7 +67,7 @@
 .description,
 .formtext{
     font-size: $textregular;
-    line-height: $lineregular;
+    line-height: $textregular;
 }
 .input,
 .input::placeholder,
@@ -85,6 +85,9 @@
 }
 .textshadow6 {
     text-shadow: 1px 1px 6px $darkergray;
+}
+.textshadow1 {
+    text-shadow: 1px 1px 4px $gray;
 }
 .whitebackground {
     background-color: $white;
@@ -125,12 +128,11 @@
     width: 100%;
     height: 4rem;
     border-radius: 3px;
-    padding: 1rem 1.8rem;
+    padding: 0 1.8rem;
     border: thin solid $cborder;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    line-height: 1;
     &:focus {
         border: thin solid $cborderfocus;
     }
@@ -161,8 +163,10 @@
         outline: thin dashed $cborder;
     }
 }
-::placeholder {
+::placeholder,
+.select:invalid {
     font-style: italic;
+    color: $darkgray;
 }
 @media (min-width: 1200px) {
     .paddingcontainer {

@@ -179,7 +179,7 @@ export default class Contact extends Component {
                         </div>
                         <div className={`${layout.flex6} ${layout.contentcard} ${styles.contacttiles}`}>
                             <Status data={this.state.status} />
-                            <label htmlFor="contact" className={global.label}>{CONT.form.label}</label>
+                            <label htmlFor="contact" className={global.label + ' ' + styles.ctaLabel}>{CONT.form.label}</label>
                             <form className={global.form} onReset={this.keydown} onSubmit={this.formsubmit} method="POST">
                                 <div className={global.formrow}>
                                     <input 
@@ -187,7 +187,7 @@ export default class Contact extends Component {
                                         type={CONT.form.name.type}
                                         className={`${global.input} ${styles.input}`} 
                                         name={CONT.form.name.name} 
-                                        placeholder={`${CONT.form.name.label} ${CONT.form.name.required ? "- (Required)" : ""}`} 
+                                        placeholder={`${CONT.form.name.label} ${CONT.form.name.required ? "- (" + CONT.form.subject.required_text + ")" : ""}`} 
                                         required={CONT.form.name.required}
                                         onInput={this.keyin} 
                                         ref="name" />
@@ -199,7 +199,7 @@ export default class Contact extends Component {
                                         type={CONT.form.phone.type} 
                                         className={`${global.input} ${styles.input}`} 
                                         name={CONT.form.phone.name} 
-                                        placeholder={`${CONT.form.phone.label} ${CONT.form.phone.required ? "- (Required)" : ""}`} 
+                                        placeholder={`${CONT.form.phone.label} ${CONT.form.phone.required ? "- (" + CONT.form.subject.required_text + ")" : ""}`} 
                                         required={CONT.form.phone.required}
                                         onInput={this.keyin}
                                         ref="phone" />
@@ -211,7 +211,7 @@ export default class Contact extends Component {
                                         type={CONT.form.email.type} 
                                         className={`${global.input} ${styles.input}`} 
                                         name={CONT.form.email.name} 
-                                        placeholder={`${CONT.form.email.label} ${CONT.form.email.required ? "- (Required)" : ""}`} 
+                                        placeholder={`${CONT.form.email.label} ${CONT.form.email.required ? "- (" + CONT.form.subject.required_text + ")" : ""}`} 
                                         required={CONT.form.email.required}
                                         onInput={this.keyin}
                                         ref="email" />
@@ -225,7 +225,7 @@ export default class Contact extends Component {
                                         onChange={this.keyin}
                                         ref="subject"
                                         defaultValue>
-                                        <option disabled value hidden>{CONT.form.subject.label} {CONT.form.subject.required ? "- (Required)" : ""}</option>
+                                        <option value="" hidden>{CONT.form.subject.label} {CONT.form.subject.required ? "- (" + CONT.form.subject.required_text + ")" : ""}</option>
                                         {
                                             CONT.form.subject.options.map((option,i)=>{
                                                 return(
@@ -243,7 +243,7 @@ export default class Contact extends Component {
                                         maxLength={CONT.form.description.maxLength} 
                                         className={`${global.textarea} ${styles.textarea}`} 
                                         name={CONT.form.description.name} 
-                                        placeholder={`${CONT.form.description.label} ${CONT.form.description.required ? "- (Required)" : ""}`} 
+                                        placeholder={`${CONT.form.description.label} ${CONT.form.description.required ? "- (" + CONT.form.subject.required_text + ")" : ""}`} 
                                         required={CONT.form.description.required}
                                         onKeyDown={this.keydown} 
                                         onInput={this.keydown}

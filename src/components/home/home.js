@@ -30,8 +30,8 @@ export default class Home extends Component {
                 </Helmet>
                 <Hero src={ this.props.bgImg } srcmin={ this.props.bgImgMin } />
                 <div className={global.paddingcontainer}>
-                    <h2 className={`${global.heading2} ${global.textcenter} ${global.textshadow6}`}>{CONT.intro.heading}</h2>
-                    <q className={global.quote}>{CONT.intro.quotation}</q>
+                    <h2 className={`${global.heading2} ${global.textcenter} ${global.textshadow1} ${styles.heading2}`}>{CONT.intro.heading}</h2>
+                    <q className={global.quote + ' ' + styles.quote}>{CONT.intro.quotation}</q>
                     <div className={styles.author}> - {CONT.intro.author}</div>
                 </div>
                 <Badges array={ badges } className={global.paddingcontainer} />
