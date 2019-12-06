@@ -24,13 +24,17 @@ export default class Contact extends Component {
                 email: '',
                 subject: '',
                 description: ''
-            }
+            },
+            isDirty: false
         }
     }
     keydown = (e) => {
         let timeout = 0;
         if(e.type === 'reset') {
             timeout = 50;
+            this.setState({
+                isDirty: false
+            })
         } else {
             this.keyin(e);
         }
@@ -86,7 +90,7 @@ export default class Contact extends Component {
                     status: {
                         display: false
                     }
-                })
+                });
                 this.enableall();
                 this.resethandler();
             }, 10000);
@@ -131,6 +135,16 @@ export default class Contact extends Component {
             formdata: state
         })
     }
+    dirty = (e) => {
+        this.setState({
+            isDirty: true
+        })
+    }
+    reset = (e) => {
+        this.setState({
+            isDirty: false
+        })
+    }
     render() {
         const CONT = this.state.content;
         let addr2 = CONT.address2.text;
@@ -143,21 +157,30 @@ export default class Contact extends Component {
                 <div className={global.paddingcontainer}>
                     <div className={layout.flexbox}>
                         <div className={`${layout.flex6} ${layout.contentcard} ${styles.contacttiles}`}>
-                            <div className={`${global.formrow}`}>
+                            <div className={styles.gmap}>
+                                <iframe 
+                                    className={styles.googlemapframe}
+                                    title="google map"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.2548686484492!2d-96.71805828481166!3d33.02341518089832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c18fac051b497%3A0xea4e8eba8639b832!2s1700%20Alma%20Dr%20%23160%2C%20Plano%2C%20TX%2075075!5e0!3m2!1sen!2sus!4v1570421126387!5m2!1sen!2sus"
+                                    frameborder="0"
+                                    allowfullscreen="" 
+                                />
+                            </div>
+                            <div className={`${global.formrow} ${styles.tile}`}>
                                 <label className={global.label}>{CONT.address1.label}</label>
                                 <div className={global.formtext}>{CONT.address1.text}</div>
                                 {addr2.length ? <div className={global.formtext}>{addr2}</div>: ''}
                                 <div className={global.formtext}>{CONT.city.text}, {CONT.state.text} {CONT.zipcode.text}</div>
                             </div>
-                            <div className={`${global.formrow}`}>
+                            <div className={`${global.formrow} ${styles.tile}`}>
                                 <label className={global.label}>{CONT.phone.label}</label>
                                 <div className={global.formtext}><a className={global.link} href={`tel:+1${CONT.phone.text}`}>{CONT.phone.text}</a></div>
                             </div>
-                            <div className={`${global.formrow}`}>
+                            <div className={`${global.formrow} ${styles.tile}`}>
                                 <label className={global.label}>{CONT.fax.label}</label>
                                 <div className={global.formtext}>{CONT.fax.text}</div>
                             </div>
-                            <div className={`${global.formrow}`}>
+                            <div className={`${global.formrow} ${styles.tile}`}>
                                 <label className={global.label}>{CONT.email.label}</label>
                                 <div className={global.formtext}>
                                     <a className={`${global.link} ${styles.breakword}`} href={`mailto:${CONT.email.text}`} target="_blank" rel="noopener noreferrer">
@@ -165,7 +188,7 @@ export default class Contact extends Component {
                                     </a>
                                 </div>
                             </div>
-                            <div className={`${global.formrow}`}>
+                            <div className={`${global.formrow} ${styles.tile}`}>
                                 <label className={global.label}>{CONT.hours.label}</label>
                                 {
                                     CONT.hours.text.map((hr, i)=>(
@@ -180,7 +203,7 @@ export default class Contact extends Component {
                         <div className={`${layout.flex6} ${layout.contentcard} ${styles.contacttiles}`}>
                             <Status data={this.state.status} />
                             <label htmlFor="contact" className={global.label + ' ' + styles.ctaLabel}>{CONT.form.label}</label>
-                            <form className={global.form} onReset={this.keydown} onSubmit={this.formsubmit} method="POST">
+                            <form className={global.form} onReset={this.keydown} onSubmit={this.formsubmit} onChange={this.dirty} method="POST">
                                 <div className={global.formrow}>
                                     <input 
                                         minLength="5" 
@@ -236,7 +259,7 @@ export default class Contact extends Component {
                                     </select>
                                 </div>
 
-                                <div className={global.formrow}>
+                                <div className={global.formrow + ' ' + styles.desc}>
                                     <textarea 
                                         id="textarea"
                                         minLength="5" 
@@ -248,14 +271,15 @@ export default class Contact extends Component {
                                         onKeyDown={this.keydown} 
                                         onInput={this.keydown}
                                         ref="description" />
-                                    <div id="wordcount" className={styles.workcount} textnum={this.state.textcount}></div>
+                                    <div id="wordcount" className={styles.wordcount} textnum={this.state.textcount}></div>
                                 </div>
                                 <div className={`${global.formrow} ${styles.flex}`}>
-                                    <button type="submit" className={`${global.button} ${styles.button}`}>{CONT.form.submit}</button>
+                                    <button type="submit" className={`${global.button} ${styles.button}`} disabled={!this.state.isDirty}>{CONT.form.submit}</button>
                                     <button 
                                         type="reset" 
                                         className={`${global.button} ${global.ghostlybutton} ${styles.button}`}
                                         onClick={this.resethandler}
+                                        disabled={!this.state.isDirty}
                                         >{CONT.form.clear}</button>
                                 </div>
                             </form>

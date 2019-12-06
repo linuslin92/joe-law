@@ -64,22 +64,34 @@ export default class Practice extends Component {
                         <ul role="tablist" aria-labelledby="practice_header">
                             <li className={global.listitem}>
                                 <Link to="/practice/criminal_law" activeClassName="active" role="tab" onClick={this.updateImage}>
-                                    <label className="areaLabel">{CONT.areas.criminal_law.title}</label>
+                                    <label 
+                                        className="areaLabel"
+                                        title={CONT.areas.criminal_law.title}
+                                    >{CONT.areas.criminal_law.title}</label>
                                 </Link>
                             </li>
                             <li className={global.listitem}>
                                 <Link to="/practice/family_law" activeClassName="active" role="tab" onClick={this.updateImage}>
-                                    <label className="areaLabel">{CONT.areas.family_law.title}</label>
+                                    <label 
+                                        className="areaLabel"
+                                        title={CONT.areas.family_law.title}
+                                    >{CONT.areas.family_law.title}</label>
                                 </Link>
                             </li>
                             <li className={global.listitem}>
                                 <Link to="/practice/immigration_law" activeClassName="active" role="tab" onClick={this.updateImage}>
-                                    <label className="areaLabel">{CONT.areas.immigration_law.title}</label>
+                                    <label 
+                                        className="areaLabel"
+                                        title={CONT.areas.immigration_law.title}
+                                    >{CONT.areas.immigration_law.title}</label>
                                 </Link>
                             </li>
                             <li className={global.listitem}>
                                 <Link to="/practice/personal_injury" activeClassName="active" role="tab" onClick={this.updateImage}>
-                                    <label className="areaLabel">{CONT.areas.personal_injury.title}</label>
+                                    <label 
+                                        className="areaLabel"
+                                        title={CONT.areas.personal_injury.title}
+                                    >{CONT.areas.personal_injury.title}</label>
                                 </Link>
                             </li>
                         </ul>

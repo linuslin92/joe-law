@@ -22,6 +22,7 @@
 }
 .contacttiles {
     width: 100%;
+    background-color: #eee;
 }
 .breakword {
     word-break: break-all;
@@ -44,11 +45,13 @@
         box-shadow: 0 1px 3px 0 $darkgray;
     }
 }
-.workcount {
-    top: -2.2rem;
+.wordcount {
+    bottom: .5rem;
     text-align: right;
-    position: relative;
+    position: absolute;
+    right: .2rem;
     padding-right: .5rem;
+    background-color: rgba(255, 255, 255, .55);
     &:before {
         content: attr(textnum) ' chars left';
         font-size: $textsmall;
@@ -64,4 +67,33 @@
     display: block;
     color: $red !important;
     font-weight: 600;
+}
+.desc {
+    position: relative;
+}
+.gmap {
+    width: auto;
+    height: 35.5rem;
+    background-color: #ccc;
+    margin-bottom: 2.5rem;
+    margin-top: -1.7rem;
+    margin-left: -1.7rem;
+    margin-right: -1.7rem;
+}
+.googlemapframe {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+}
+.tile {
+    padding: .5rem 1rem;
+    background-color: #ccc;
+    border-radius: .5rem;
+    a {
+        &:hover {
+            text-decoration: underline;
+            text-decoration-skip-ink: auto;
+            text-decoration-style: dotted;
+        }
+    }
 }

@@ -4,24 +4,6 @@
     max-width: 126rem;
     margin: 0 auto;
 }
-.heading1 {
-    font-size: $h1;
-}
-.heading2 {
-    font-size: $h2;
-}
-.heading3 {
-    font-size: $h3;
-}
-.heading4 {
-    font-size: $h4;
-}
-.heading5 {
-    font-size: $h5;
-}
-.label {
-    font-size: $textregular;
-}
 .heading1,
 .heading2,
 .heading3,
@@ -67,7 +49,7 @@
 .description,
 .formtext{
     font-size: $textregular;
-    line-height: $textregular;
+    line-height: 1.7;
 }
 .input,
 .input::placeholder,
@@ -97,7 +79,7 @@
 }
 
 /* FORM */
-.formrow {
+.formrow:not(:last-child) {
     margin-bottom: 2.5rem;
 }
 .formtext {
@@ -153,6 +135,14 @@
     &:focus {
         outline: thin dashed $white;
     }
+    &[disabled] {
+        background-color: #999;
+        border-color: #ccc;
+        color: #fff;
+        &:hover {
+            box-shadow: none;
+        }
+    }
 }
 .ghostlybutton {
     background-color: $cresetbtn;
@@ -193,11 +183,67 @@
     }
 }
 @media (min-width: 768px) {
+    .heading1 {
+        font-size: $h1;
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
+    }
+    .heading2 {
+        font-size: $h2;
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
+    }
+    .heading3 {
+        font-size: $h3;
+        margin-top: 1.4rem;
+        margin-bottom: 1.4rem;
+    }
+    .heading4 {
+        font-size: $h4;
+        margin-top: 1.4rem;
+        margin-bottom: 1.4rem;
+    }
+    .heading5 {
+        font-size: $h5;
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    .label {
+        font-size: $textregular;
+    }
     .quote {
         font-size: 3.2rem;
     }
 }
 @media (max-width: 767px) {
+    .heading1 {
+        font-size: $h1 - 1.2rem;
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
+    }
+    .heading2 {
+        font-size: $h2 - 1.2rem;
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
+    }
+    .heading3 {
+        font-size: $h3 - 1rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .heading4 {
+        font-size: $h4 - 1rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .heading5 {
+        font-size: $h5 - .8rem;
+        margin-top: 1.4rem;
+        margin-bottom: 1.4rem;
+    }
+    .label {
+        font-size: $textregular - .2rem;
+    }
     .quote {
         font-size: 2.8rem;
     }

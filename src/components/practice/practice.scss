@@ -5,7 +5,6 @@ $white: #fff;
 $dark: rgba(64, 64, 64, 1);
 $lightBg: #f2f2f2;
 .area_menu  {
-    width: 100%;
     > ul {
         display: flex;
         top: 0;
@@ -42,6 +41,11 @@ $lightBg: #f2f2f2;
         .areaLabel {
             flex: 0 30rem;
             font-weight: 500;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            vertical-align: middle;
+            display: inline-block;
         }
     }
 }
@@ -54,12 +58,16 @@ $lightBg: #f2f2f2;
 @media screen and (min-width: 769px) {
     .area_menu {
         padding-top: 2rem;
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
         > ul {
             > li {
-                margin-left: 1rem;
                 border-radius: .5rem .5rem 0 0;
                 border-bottom-width: 0;
                 border: .1rem solid $dark;
+                &:not(:first-child) {
+                    margin-left: .5rem;
+                }
             }
         }
         a {
@@ -95,6 +103,8 @@ $lightBg: #f2f2f2;
         margin-right: 2rem;
     }
     .area_menu {
+        margin-left: 2rem;
+        margin-right: 2rem;
         li {
             white-space: nowrap;
         }
@@ -118,11 +128,10 @@ $lightBg: #f2f2f2;
         }
     }
 }
-@media screen and (min-width: 641px) {
-}
 @media screen and (max-width: 640px) {
     .area_menu {
         padding-top: 0;
+        width: 100%;
         > ul {
             flex-direction: column;
             margin-top: 0;

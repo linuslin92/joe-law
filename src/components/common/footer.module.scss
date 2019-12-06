@@ -45,12 +45,6 @@ footer {
         @media (max-width: 767px) {
             white-space: pre-wrap;
         }
-        > :nth-child(2) {
-            &:before {
-                content: ', ';
-                display: inline;
-            }
-        }
     }
     .addr {
         display: inline-block;
